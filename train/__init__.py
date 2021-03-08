@@ -1,0 +1,2 @@
+from .sample_train import inductive_sage_run,transductive_sage_run
+from .whole_train import cheb_coarsen_run,gat_run

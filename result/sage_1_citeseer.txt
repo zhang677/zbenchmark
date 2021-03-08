@@ -1,0 +1,60 @@
+SAGE(
+  (layers): ModuleList(
+    (0): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_self): Linear(in_features=3703, out_features=64, bias=True)
+      (fc_neigh): Linear(in_features=3703, out_features=64, bias=True)
+    )
+    (1): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_self): Linear(in_features=64, out_features=6, bias=True)
+      (fc_neigh): Linear(in_features=64, out_features=6, bias=True)
+    )
+  )
+  (dropout): Dropout(p=0.0, inplace=False)
+)
+Epoch 00000 | Step 00000 | Loss 1.7896 | Train Acc 0.1875 | Train F1 0.1250 | Speed (samples/sec) nan| Forward Speed (samples/sec) nan|Backward Speed (samples/sec) nan|GPU 11.8 MB
+Epoch Time(s): 3.881784 | Total steps:    3 | Total forward time: 3.775093s | Total backward time: 0.025086s 
+Epoch 00001 | Step 00000 | Loss 1.7372 | Train Acc 0.6250 | Train F1 0.1562 | Speed (samples/sec) 1813.0403| Forward Speed (samples/sec) 3543.3020|Backward Speed (samples/sec) 7614.3201|GPU 11.9 MB
+Epoch Time(s): 0.469815 | Total steps:    3 | Total forward time: 0.364830s | Total backward time: 0.014479s 
+Epoch 00002 | Step 00000 | Loss 1.6893 | Train Acc 0.8125 | Train F1 0.0938 | Speed (samples/sec) 1815.0911| Forward Speed (samples/sec) 3144.7786|Backward Speed (samples/sec) 7862.8130|GPU 11.9 MB
+Epoch Time(s): 0.465021 | Total steps:    3 | Total forward time: 0.343233s | Total backward time: 0.015067s 
+Epoch 00003 | Step 00000 | Loss 1.6863 | Train Acc 0.6562 | Train F1 0.2188 | Speed (samples/sec) 2120.7844| Forward Speed (samples/sec) 3606.8676|Backward Speed (samples/sec) 8066.9655|GPU 11.9 MB
+Epoch Time(s): 0.434173 | Total steps:    3 | Total forward time: 0.330252s | Total backward time: 0.014576s 
+Epoch 00004 | Step 00000 | Loss 1.6020 | Train Acc 0.8125 | Train F1 0.1562 | Speed (samples/sec) 2047.4708| Forward Speed (samples/sec) 3385.6080|Backward Speed (samples/sec) 8005.6995|GPU 11.9 MB
+Epoch Time(s): 0.427667 | Total steps:    3 | Total forward time: 0.325549s | Total backward time: 0.017788s 
+Epoch 00005 | Step 00000 | Loss 1.5490 | Train Acc 0.8438 | Train F1 0.1875 | Speed (samples/sec) 2032.9340| Forward Speed (samples/sec) 3331.6693|Backward Speed (samples/sec) 7877.0782|GPU 11.9 MB
+Epoch Time(s): 0.441363 | Total steps:    3 | Total forward time: 0.346449s | Total backward time: 0.016112s 
+Eval Acc 0.2340 | F1 0.0580 | Eval time: 1.092267 s
+Epoch 00006 | Step 00000 | Loss 1.4319 | Train Acc 0.9062 | Train F1 0.2188 | Speed (samples/sec) 1989.7843| Forward Speed (samples/sec) 3237.4098|Backward Speed (samples/sec) 7854.9301|GPU 11.9 MB
+Epoch Time(s): 0.438020 | Total steps:    3 | Total forward time: 0.337456s | Total backward time: 0.014036s 
+Epoch 00007 | Step 00000 | Loss 1.3486 | Train Acc 1.0000 | Train F1 0.1562 | Speed (samples/sec) 2063.6792| Forward Speed (samples/sec) 3396.1048|Backward Speed (samples/sec) 7893.7187|GPU 11.9 MB
+Epoch Time(s): 0.474371 | Total steps:    3 | Total forward time: 0.353720s | Total backward time: 0.015731s 
+Epoch 00008 | Step 00000 | Loss 1.2797 | Train Acc 1.0000 | Train F1 0.1562 | Speed (samples/sec) 2094.9980| Forward Speed (samples/sec) 3482.7923|Backward Speed (samples/sec) 7967.9123|GPU 11.9 MB
+Epoch Time(s): 0.419424 | Total steps:    3 | Total forward time: 0.321656s | Total backward time: 0.015211s 
+Epoch 00009 | Step 00000 | Loss 1.1818 | Train Acc 1.0000 | Train F1 0.3125 | Speed (samples/sec) 2116.0702| Forward Speed (samples/sec) 3533.2279|Backward Speed (samples/sec) 7852.4331|GPU 11.9 MB
+Epoch Time(s): 0.446912 | Total steps:    3 | Total forward time: 0.326141s | Total backward time: 0.023381s 
+Epoch 00010 | Step 00000 | Loss 1.0482 | Train Acc 1.0000 | Train F1 0.1562 | Speed (samples/sec) 2039.1097| Forward Speed (samples/sec) 3388.3154|Backward Speed (samples/sec) 7620.3108|GPU 11.9 MB
+Epoch Time(s): 0.421727 | Total steps:    3 | Total forward time: 0.323112s | Total backward time: 0.018850s 
+Eval Acc 0.4100 | F1 0.0600 | Eval time: 1.013319 s
+Epoch 00011 | Step 00000 | Loss 0.9641 | Train Acc 1.0000 | Train F1 0.3125 | Speed (samples/sec) 1968.3825| Forward Speed (samples/sec) 3247.6695|Backward Speed (samples/sec) 7525.0554|GPU 11.9 MB
+Epoch Time(s): 0.441571 | Total steps:    3 | Total forward time: 0.337102s | Total backward time: 0.016865s 
+Epoch 00012 | Step 00000 | Loss 0.8215 | Train Acc 1.0000 | Train F1 0.3125 | Speed (samples/sec) 2030.7044| Forward Speed (samples/sec) 3415.6939|Backward Speed (samples/sec) 7495.5268|GPU 11.9 MB
+Epoch Time(s): 0.415730 | Total steps:    3 | Total forward time: 0.315344s | Total backward time: 0.017243s 
+Epoch 00013 | Step 00000 | Loss 0.6849 | Train Acc 1.0000 | Train F1 0.5938 | Speed (samples/sec) 2018.5643| Forward Speed (samples/sec) 3397.2817|Backward Speed (samples/sec) 7467.8243|GPU 11.9 MB
+Epoch Time(s): 0.419509 | Total steps:    3 | Total forward time: 0.317777s | Total backward time: 0.015420s 
+Epoch 00014 | Step 00000 | Loss 0.6561 | Train Acc 1.0000 | Train F1 0.6250 | Speed (samples/sec) 2085.2829| Forward Speed (samples/sec) 3565.7921|Backward Speed (samples/sec) 7493.0631|GPU 11.9 MB
+Epoch Time(s): 0.398174 | Total steps:    3 | Total forward time: 0.305676s | Total backward time: 0.014560s 
+Epoch 00015 | Step 00000 | Loss 0.5565 | Train Acc 1.0000 | Train F1 0.9062 | Speed (samples/sec) 2124.4780| Forward Speed (samples/sec) 3647.0330|Backward Speed (samples/sec) 7550.2573|GPU 11.9 MB
+Epoch Time(s): 0.464546 | Total steps:    3 | Total forward time: 0.357792s | Total backward time: 0.018332s 
+Eval Acc 0.4280 | F1 0.0700 | Eval time: 1.066115 s
+Epoch 00016 | Step 00000 | Loss 0.4665 | Train Acc 1.0000 | Train F1 0.9375 | Speed (samples/sec) 2067.0981| Forward Speed (samples/sec) 3519.2795|Backward Speed (samples/sec) 7451.8614|GPU 11.9 MB
+Epoch Time(s): 0.428039 | Total steps:    3 | Total forward time: 0.332869s | Total backward time: 0.022168s 
+Epoch 00017 | Step 00000 | Loss 0.4472 | Train Acc 1.0000 | Train F1 1.0000 | Speed (samples/sec) 2006.9847| Forward Speed (samples/sec) 3397.7924|Backward Speed (samples/sec) 7380.5190|GPU 11.9 MB
+Epoch Time(s): 0.459707 | Total steps:    3 | Total forward time: 0.350977s | Total backward time: 0.015896s 
+Epoch 00018 | Step 00000 | Loss 0.3497 | Train Acc 1.0000 | Train F1 1.0000 | Speed (samples/sec) 2046.1091| Forward Speed (samples/sec) 3484.1532|Backward Speed (samples/sec) 7412.8862|GPU 11.9 MB
+Epoch Time(s): 0.435661 | Total steps:    3 | Total forward time: 0.328578s | Total backward time: 0.014488s 
+Epoch 00019 | Step 00000 | Loss 0.3220 | Train Acc 1.0000 | Train F1 1.0000 | Speed (samples/sec) 2029.2006| Forward Speed (samples/sec) 3439.3489|Backward Speed (samples/sec) 7479.2227|GPU 11.9 MB
+Epoch Time(s): 0.447857 | Total steps:    3 | Total forward time: 0.355978s | Total backward time: 0.012975s 
+Test Acc: 0.3772| F1: 0.1167| Test time: 2.316939 s
+Avg epoch time(s): 0.4368 | F1 0.1167 | Total epochs:   20 | Total Time: 17.720696 s | Total Train Time:12.231071 s

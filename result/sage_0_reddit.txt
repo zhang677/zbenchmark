@@ -1,0 +1,169 @@
+SAGE(
+  (layers): ModuleList(
+    (0): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_self): Linear(in_features=602, out_features=64, bias=True)
+      (fc_neigh): Linear(in_features=602, out_features=64, bias=True)
+    )
+    (1): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_self): Linear(in_features=64, out_features=41, bias=True)
+      (fc_neigh): Linear(in_features=64, out_features=41, bias=True)
+    )
+  )
+  (dropout): Dropout(p=0.0, inplace=False)
+)
+Epoch 00000 | Step 00000 | Loss 6.7085 | Train Acc 0.0625 | Train F1 0.0625 Speed (samples/sec) nan | GPU 19.5 MB
+Epoch 00000 | Step 00200 | Loss 0.3667 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1326.8380 | GPU 37.7 MB
+Epoch 00000 | Step 00400 | Loss 0.5163 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1292.8654 | GPU 38.2 MB
+Epoch 00000 | Step 00600 | Loss 0.1052 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1265.5961 | GPU 38.2 MB
+Epoch 00000 | Step 00800 | Loss 0.1459 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1240.9366 | GPU 38.2 MB
+Epoch 00000 | Step 01000 | Loss 0.9172 | Train Acc 0.8125 | Train F1 0.8125 Speed (samples/sec) 1219.3780 | GPU 38.2 MB
+Epoch 00000 | Step 01200 | Loss 0.3018 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1216.2220 | GPU 38.2 MB
+Epoch 00000 | Step 01400 | Loss 0.3438 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1217.9951 | GPU 38.6 MB
+Epoch 00000 | Step 01600 | Loss 0.7008 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1214.7374 | GPU 38.6 MB
+Epoch 00000 | Step 01800 | Loss 0.3789 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1220.9340 | GPU 38.6 MB
+Epoch 00000 | Step 02000 | Loss 0.1074 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1225.0151 | GPU 38.6 MB
+Epoch 00000 | Step 02200 | Loss 0.6941 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1232.7948 | GPU 38.6 MB
+Epoch 00000 | Step 02400 | Loss 0.1282 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1237.1285 | GPU 38.6 MB
+Epoch 00000 | Step 02600 | Loss 0.0012 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1241.4462 | GPU 38.6 MB
+Epoch 00000 | Step 02800 | Loss 0.1470 | Train Acc 0.9375 | Train F1 0.9688 Speed (samples/sec) 1246.1933 | GPU 38.6 MB
+Epoch 00000 | Step 03000 | Loss 0.3885 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1249.8963 | GPU 38.6 MB
+Epoch 00000 | Step 03200 | Loss 0.2121 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1255.7590 | GPU 38.6 MB
+Epoch 00000 | Step 03400 | Loss 1.1767 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1259.3087 | GPU 38.6 MB
+Epoch 00000 | Step 03600 | Loss 0.3570 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1261.8235 | GPU 38.6 MB
+Epoch 00000 | Step 03800 | Loss 0.9159 | Train Acc 0.8750 | Train F1 0.9062 Speed (samples/sec) 1264.1980 | GPU 38.6 MB
+Epoch 00000 | Step 04000 | Loss 0.5568 | Train Acc 0.8750 | Train F1 0.9062 Speed (samples/sec) 1266.4356 | GPU 38.6 MB
+Epoch 00000 | Step 04200 | Loss 0.5746 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1269.0360 | GPU 38.6 MB
+Epoch 00000 | Step 04400 | Loss 1.6216 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1270.8829 | GPU 38.6 MB
+Epoch 00000 | Step 04600 | Loss 0.5493 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1274.4044 | GPU 38.6 MB
+Epoch Time(s): 131.0362
+Epoch 00001 | Step 00000 | Loss 0.2115 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1276.9530 | GPU 38.6 MB
+Epoch 00001 | Step 00200 | Loss 0.1406 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1279.7744 | GPU 38.6 MB
+Epoch 00001 | Step 00400 | Loss 0.4074 | Train Acc 0.9062 | Train F1 0.9375 Speed (samples/sec) 1282.1153 | GPU 38.6 MB
+Epoch 00001 | Step 00600 | Loss 0.4560 | Train Acc 0.8750 | Train F1 0.9062 Speed (samples/sec) 1285.1825 | GPU 38.6 MB
+Epoch 00001 | Step 00800 | Loss 0.2043 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1287.2982 | GPU 38.6 MB
+Epoch 00001 | Step 01000 | Loss 0.1203 | Train Acc 0.9688 | Train F1 0.9375 Speed (samples/sec) 1290.1861 | GPU 38.6 MB
+Epoch 00001 | Step 01200 | Loss 0.9933 | Train Acc 0.8125 | Train F1 0.8125 Speed (samples/sec) 1292.1839 | GPU 38.7 MB
+Epoch 00001 | Step 01400 | Loss 0.2277 | Train Acc 0.9375 | Train F1 0.9062 Speed (samples/sec) 1294.5801 | GPU 38.7 MB
+Epoch 00001 | Step 01600 | Loss 0.7759 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1296.6866 | GPU 38.7 MB
+Epoch 00001 | Step 01800 | Loss 0.8588 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1297.1481 | GPU 38.9 MB
+Epoch 00001 | Step 02000 | Loss 1.1040 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1297.7234 | GPU 38.9 MB
+Epoch 00001 | Step 02200 | Loss 0.7189 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1298.0625 | GPU 38.9 MB
+Epoch 00001 | Step 02400 | Loss 0.9099 | Train Acc 0.9062 | Train F1 0.8750 Speed (samples/sec) 1299.5822 | GPU 38.9 MB
+Epoch 00001 | Step 02600 | Loss 0.3770 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1298.9200 | GPU 38.9 MB
+Epoch 00001 | Step 02800 | Loss 1.2237 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1298.8895 | GPU 38.9 MB
+Epoch 00001 | Step 03000 | Loss 0.3257 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1299.3817 | GPU 38.9 MB
+Epoch 00001 | Step 03200 | Loss 0.3968 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1300.1791 | GPU 38.9 MB
+Epoch 00001 | Step 03400 | Loss 0.6811 | Train Acc 0.8750 | Train F1 0.8438 Speed (samples/sec) 1301.7646 | GPU 38.9 MB
+Epoch 00001 | Step 03600 | Loss 0.1336 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1301.6835 | GPU 38.9 MB
+Epoch 00001 | Step 03800 | Loss 0.7698 | Train Acc 0.9062 | Train F1 0.9375 Speed (samples/sec) 1302.1287 | GPU 38.9 MB
+Epoch 00001 | Step 04000 | Loss 0.0085 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1301.9490 | GPU 38.9 MB
+Epoch 00001 | Step 04200 | Loss 0.2929 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1302.9506 | GPU 38.9 MB
+Epoch 00001 | Step 04400 | Loss 0.3941 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1303.7807 | GPU 38.9 MB
+Epoch 00001 | Step 04600 | Loss 0.4114 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1304.2978 | GPU 38.9 MB
+Epoch Time(s): 122.4338
+Epoch 00002 | Step 00000 | Loss 0.2827 | Train Acc 0.9375 | Train F1 0.9688 Speed (samples/sec) 1304.6006 | GPU 38.9 MB
+Epoch 00002 | Step 00200 | Loss 0.1701 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1305.2258 | GPU 38.9 MB
+Epoch 00002 | Step 00400 | Loss 0.1020 | Train Acc 0.9688 | Train F1 0.9375 Speed (samples/sec) 1306.0014 | GPU 38.9 MB
+Epoch 00002 | Step 00600 | Loss 1.1299 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1306.2150 | GPU 38.9 MB
+Epoch 00002 | Step 00800 | Loss 0.1335 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1306.5090 | GPU 38.9 MB
+Epoch 00002 | Step 01000 | Loss 0.1617 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1306.7870 | GPU 38.9 MB
+Epoch 00002 | Step 01200 | Loss 1.4100 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1306.6228 | GPU 38.9 MB
+Epoch 00002 | Step 01400 | Loss 0.0105 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1306.0927 | GPU 38.9 MB
+Epoch 00002 | Step 01600 | Loss 0.2945 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1306.0928 | GPU 38.9 MB
+Epoch 00002 | Step 01800 | Loss 0.2074 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1306.0689 | GPU 38.9 MB
+Epoch 00002 | Step 02000 | Loss 1.3724 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1306.6540 | GPU 38.9 MB
+Epoch 00002 | Step 02200 | Loss 0.5186 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1307.2252 | GPU 38.9 MB
+Epoch 00002 | Step 02400 | Loss 1.0890 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1307.5169 | GPU 38.9 MB
+Epoch 00002 | Step 02600 | Loss 0.2908 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1307.1815 | GPU 38.9 MB
+Epoch 00002 | Step 02800 | Loss 0.1145 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1306.8943 | GPU 38.9 MB
+Epoch 00002 | Step 03000 | Loss 0.0345 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1307.3593 | GPU 38.9 MB
+Epoch 00002 | Step 03200 | Loss 0.0442 | Train Acc 0.9688 | Train F1 1.0000 Speed (samples/sec) 1307.4656 | GPU 38.9 MB
+Epoch 00002 | Step 03400 | Loss 0.1891 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1307.0266 | GPU 38.9 MB
+Epoch 00002 | Step 03600 | Loss 0.3518 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1306.5814 | GPU 38.9 MB
+Epoch 00002 | Step 03800 | Loss 0.6322 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1306.8747 | GPU 38.9 MB
+Epoch 00002 | Step 04000 | Loss 0.1396 | Train Acc 0.9375 | Train F1 0.9688 Speed (samples/sec) 1308.3235 | GPU 38.9 MB
+Epoch 00002 | Step 04200 | Loss 0.0209 | Train Acc 1.0000 | Train F1 0.9688 Speed (samples/sec) 1309.8044 | GPU 38.9 MB
+Epoch 00002 | Step 04400 | Loss 0.1903 | Train Acc 0.9375 | Train F1 0.9688 Speed (samples/sec) 1310.5965 | GPU 38.9 MB
+Epoch 00002 | Step 04600 | Loss 0.6217 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1311.7559 | GPU 38.9 MB
+Epoch Time(s): 122.9620
+Eval Acc 0.9340 | F1 0.9336 
+Epoch 00003 | Step 00000 | Loss 0.7695 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1310.0918 | GPU 78.6 MB
+Epoch 00003 | Step 00200 | Loss 0.0371 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1310.7547 | GPU 78.6 MB
+Epoch 00003 | Step 00400 | Loss 0.4285 | Train Acc 0.9062 | Train F1 0.8750 Speed (samples/sec) 1310.6395 | GPU 78.6 MB
+Epoch 00003 | Step 00600 | Loss 0.3462 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1311.6903 | GPU 78.6 MB
+Epoch 00003 | Step 00800 | Loss 0.0056 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1312.4336 | GPU 78.6 MB
+Epoch 00003 | Step 01000 | Loss 0.4041 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1312.5775 | GPU 78.6 MB
+Epoch 00003 | Step 01200 | Loss 1.1237 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1312.6274 | GPU 78.6 MB
+Epoch 00003 | Step 01400 | Loss 0.3857 | Train Acc 0.9062 | Train F1 0.9375 Speed (samples/sec) 1313.3126 | GPU 78.6 MB
+Epoch 00003 | Step 01600 | Loss 0.5535 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1314.2599 | GPU 78.6 MB
+Epoch 00003 | Step 01800 | Loss 0.4231 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1315.2564 | GPU 78.6 MB
+Epoch 00003 | Step 02000 | Loss 0.4714 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1316.8760 | GPU 78.6 MB
+Epoch 00003 | Step 02200 | Loss 0.1793 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1317.4127 | GPU 78.6 MB
+Epoch 00003 | Step 02400 | Loss 0.1270 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1318.4598 | GPU 78.6 MB
+Epoch 00003 | Step 02600 | Loss 0.1400 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1318.9288 | GPU 78.6 MB
+Epoch 00003 | Step 02800 | Loss 0.2632 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1320.4389 | GPU 78.6 MB
+Epoch 00003 | Step 03000 | Loss 0.3028 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1321.6518 | GPU 78.6 MB
+Epoch 00003 | Step 03200 | Loss 0.0554 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1322.8996 | GPU 78.6 MB
+Epoch 00003 | Step 03400 | Loss 0.2465 | Train Acc 0.9688 | Train F1 0.9375 Speed (samples/sec) 1323.9795 | GPU 78.6 MB
+Epoch 00003 | Step 03600 | Loss 0.1817 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1324.4469 | GPU 78.6 MB
+Epoch 00003 | Step 03800 | Loss 0.2664 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1324.7876 | GPU 78.6 MB
+Epoch 00003 | Step 04000 | Loss 0.5607 | Train Acc 0.9062 | Train F1 0.8750 Speed (samples/sec) 1324.9356 | GPU 78.6 MB
+Epoch 00003 | Step 04200 | Loss 1.2031 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1325.1734 | GPU 78.6 MB
+Epoch 00003 | Step 04400 | Loss 0.4254 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1325.4862 | GPU 78.6 MB
+Epoch 00003 | Step 04600 | Loss 0.5931 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1325.5318 | GPU 78.6 MB
+Epoch Time(s): 118.1916
+Epoch 00004 | Step 00000 | Loss 0.6107 | Train Acc 0.9375 | Train F1 0.9688 Speed (samples/sec) 1325.5216 | GPU 78.6 MB
+Epoch 00004 | Step 00200 | Loss 0.3737 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1325.4218 | GPU 78.6 MB
+Epoch 00004 | Step 00400 | Loss 0.4771 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1325.1768 | GPU 78.6 MB
+Epoch 00004 | Step 00600 | Loss 0.3076 | Train Acc 0.8750 | Train F1 0.9062 Speed (samples/sec) 1325.1038 | GPU 78.6 MB
+Epoch 00004 | Step 00800 | Loss 0.2167 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1325.3444 | GPU 78.6 MB
+Epoch 00004 | Step 01000 | Loss 0.2995 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1325.8617 | GPU 78.6 MB
+Epoch 00004 | Step 01200 | Loss 0.6070 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1326.4558 | GPU 78.6 MB
+Epoch 00004 | Step 01400 | Loss 0.2750 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1327.0708 | GPU 78.6 MB
+Epoch 00004 | Step 01600 | Loss 0.3735 | Train Acc 0.8750 | Train F1 0.9062 Speed (samples/sec) 1327.6076 | GPU 78.6 MB
+Epoch 00004 | Step 01800 | Loss 0.1726 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1327.9858 | GPU 78.6 MB
+Epoch 00004 | Step 02000 | Loss 0.1813 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1328.4306 | GPU 78.6 MB
+Epoch 00004 | Step 02200 | Loss 0.4018 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1328.8891 | GPU 78.6 MB
+Epoch 00004 | Step 02400 | Loss 0.1985 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1329.2216 | GPU 78.6 MB
+Epoch 00004 | Step 02600 | Loss 0.0323 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1329.5146 | GPU 78.6 MB
+Epoch 00004 | Step 02800 | Loss 0.3861 | Train Acc 0.8750 | Train F1 0.8438 Speed (samples/sec) 1329.8254 | GPU 78.6 MB
+Epoch 00004 | Step 03000 | Loss 0.1218 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1330.2780 | GPU 78.6 MB
+Epoch 00004 | Step 03200 | Loss 0.6191 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1331.0228 | GPU 78.6 MB
+Epoch 00004 | Step 03400 | Loss 0.1512 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1331.4664 | GPU 78.6 MB
+Epoch 00004 | Step 03600 | Loss 0.7563 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1331.1938 | GPU 78.6 MB
+Epoch 00004 | Step 03800 | Loss 0.4241 | Train Acc 0.8750 | Train F1 0.9062 Speed (samples/sec) 1330.3902 | GPU 78.6 MB
+Epoch 00004 | Step 04000 | Loss 0.6203 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1329.6443 | GPU 78.6 MB
+Epoch 00004 | Step 04200 | Loss 0.1544 | Train Acc 0.9375 | Train F1 0.9688 Speed (samples/sec) 1329.3984 | GPU 78.6 MB
+Epoch 00004 | Step 04400 | Loss 0.1389 | Train Acc 0.9688 | Train F1 0.9375 Speed (samples/sec) 1329.5997 | GPU 78.6 MB
+Epoch 00004 | Step 04600 | Loss 0.1616 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1330.5222 | GPU 78.6 MB
+Epoch Time(s): 119.5938
+Eval Acc 0.9315 | F1 0.9305 
+Epoch 00005 | Step 00000 | Loss 0.1384 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1331.4431 | GPU 81.7 MB
+Epoch 00005 | Step 00200 | Loss 0.1729 | Train Acc 0.9375 | Train F1 0.9062 Speed (samples/sec) 1331.6558 | GPU 81.7 MB
+Epoch 00005 | Step 00400 | Loss 0.1592 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1332.3036 | GPU 81.7 MB
+Epoch 00005 | Step 00600 | Loss 0.0625 | Train Acc 1.0000 | Train F1 0.9688 Speed (samples/sec) 1332.7741 | GPU 81.7 MB
+Epoch 00005 | Step 00800 | Loss 0.8057 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1333.2982 | GPU 81.7 MB
+Epoch 00005 | Step 01000 | Loss 0.2383 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1333.5517 | GPU 81.7 MB
+Epoch 00005 | Step 01200 | Loss 1.3329 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1333.4039 | GPU 81.7 MB
+Epoch 00005 | Step 01400 | Loss 0.3151 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1333.1788 | GPU 81.7 MB
+Epoch 00005 | Step 01600 | Loss 1.1206 | Train Acc 0.8438 | Train F1 0.8438 Speed (samples/sec) 1332.8288 | GPU 81.7 MB
+Epoch 00005 | Step 01800 | Loss 0.3266 | Train Acc 0.9062 | Train F1 0.8750 Speed (samples/sec) 1332.3695 | GPU 81.7 MB
+Epoch 00005 | Step 02000 | Loss 0.5639 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1332.1598 | GPU 81.7 MB
+Epoch 00005 | Step 02200 | Loss 0.2859 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1330.8004 | GPU 81.7 MB
+Epoch 00005 | Step 02400 | Loss 0.0009 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1329.5627 | GPU 81.7 MB
+Epoch 00005 | Step 02600 | Loss 0.1021 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1328.6449 | GPU 81.7 MB
+Epoch 00005 | Step 02800 | Loss 0.2341 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1328.0962 | GPU 81.7 MB
+Epoch 00005 | Step 03000 | Loss 0.0207 | Train Acc 1.0000 | Train F1 1.0000 Speed (samples/sec) 1328.3188 | GPU 81.7 MB
+Epoch 00005 | Step 03200 | Loss 0.6229 | Train Acc 0.9062 | Train F1 0.9062 Speed (samples/sec) 1329.2465 | GPU 81.7 MB
+Epoch 00005 | Step 03400 | Loss 0.3395 | Train Acc 0.9688 | Train F1 0.9375 Speed (samples/sec) 1329.7701 | GPU 81.7 MB
+Epoch 00005 | Step 03600 | Loss 0.5032 | Train Acc 0.8750 | Train F1 0.8750 Speed (samples/sec) 1329.9928 | GPU 81.7 MB
+Epoch 00005 | Step 03800 | Loss 0.5329 | Train Acc 0.9375 | Train F1 0.9062 Speed (samples/sec) 1330.1626 | GPU 81.7 MB
+Epoch 00005 | Step 04000 | Loss 0.1648 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1330.5307 | GPU 81.7 MB
+Epoch 00005 | Step 04200 | Loss 0.2309 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1330.6043 | GPU 81.7 MB
+Epoch 00005 | Step 04400 | Loss 0.3941 | Train Acc 0.9375 | Train F1 0.9375 Speed (samples/sec) 1330.8400 | GPU 81.7 MB
+Epoch 00005 | Step 04600 | Loss 0.3995 | Train Acc 0.9688 | Train F1 0.9688 Speed (samples/sec) 1330.7850 | GPU 81.7 MB
+Epoch Time(s): 122.1415
+Test Acc: 0.9399| F1: 0.9372
+Avg epoch time(s): 122.1415 | F1 0.9372
