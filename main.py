@@ -18,6 +18,7 @@ from whole_train import gat_run
 """
 from train import *
 from graph import *
+import utils
 import time
 
 
@@ -26,7 +27,17 @@ import time
 data_gpu = -1 # data还没有放到gpu上
 data = load_mnist_cheb(2)
 cheb_coarsen_run(data,data_gpu,2)
+"""
 
+dataset = 'citeseer'
+data_gpu = 0
+train_gpu = 0 # data还没有放到gpu上
+g,num_classes = load_ordinary_graph(dataset)
+data = utils.gat_data(g,num_classes)
+batch_gat_run(data_gpu,train_gpu,data,'result/batch_gat_{:d}_{:s}.txt'.format(train_gpu,dataset))
+print('over')
+
+"""
 #Cheb4
 data_gpu = -1 # data还没有放到gpu上
 data = load_mnist_cheb(4)
@@ -65,7 +76,7 @@ dataset = 'cora'
 data_gpu = 0 # TODO 还有一些问题，搞不清是把谁（data 还是 model）存在哪
 train_gpu = 0
 g,num_classes = load_ordinary_graph(dataset)
-data = inductive_sage_data(g,num_classes,data_gpu)
+data = utils.inductive_sage_data(g,num_classes,data_gpu)
 inductive_sage_run(train_gpu,data,'result/sage_{:d}_{:s}.txt'.format(train_gpu,dataset))
 print('over')
 """
@@ -86,7 +97,7 @@ inductive_sage_run(train_gpu,data,'result/sage_{:d}_{:s}.txt'.format(train_gpu,d
 print("train over :{:.6f} s".format(time.time()-tic))
 print('over')
 """
-
+"""
 #transductive
 dataset = 'citeseer'
 data_gpu = 1
@@ -95,9 +106,10 @@ print("load graph :")
 tic = time.time()
 g,num_classes = load_ordinary_graph(dataset)
 print("load graph over :{:.6f} s".format(time.time()-tic))
-transductive_sage_run(data_gpu,train_gpu,g,num_classes,'result/tran_sage_{:d}_{:s}.txt'.format(train_gpu,dataset))
+transductive_sage_run(data_gpu,train_gpu,g,num_classes,'result/tran_sage_{:d}_{:s}.txt'.format(train_gpu,dataset),)
 print("train over :{:.6f} s".format(time.time()-tic))
 print('over')
+"""
 """
 dataset='reddit'
 data_gpu = -1

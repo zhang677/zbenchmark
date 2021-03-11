@@ -39,7 +39,7 @@ def gat_run(data,gpu=-1,filename='result/gat_run.txt',num_out_heads=1,num_layers
     
     # Unpack the data
     n_classes,n_edges,g,num_feats = data
-    g = g.int().to(device)
+    #g = g.int().to(device)
     features = g.ndata['feat'].to(device)
     labels = g.ndata['label']
     train_mask = g.ndata['train_mask']

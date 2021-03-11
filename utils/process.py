@@ -38,7 +38,7 @@ def inductive_sage_data(g, n_classes, data_gpu):
         val_nfeat, val_labels, test_nfeat, test_labels
 
 
-def gat_data(g, n_classes, gpu):
+def gat_data(g, n_classes):
     # add self loop
     g = dgl.remove_self_loop(g)
     g = dgl.add_self_loop(g)
