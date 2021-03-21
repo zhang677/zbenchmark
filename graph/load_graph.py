@@ -138,8 +138,8 @@ def load_mnist_cheb(pool_size=2,grid_side=28, number_edges=8, metric='euclidean'
         g.ndata['xy'] = coordinate_arr
         g.apply_edges(cheb_z2_dist)
         # g 本身的结构和是什么数字的照片（用x_batch描述）无关，但是不同层的graph结构不同
-    trainset = datasets.MNIST(root='.', train=True,download=True, transform=transforms.ToTensor())
-    testset = datasets.MNIST(root='.', train=False,download=True, transform=transforms.ToTensor())
+    trainset = datasets.MNIST(root='/home/zhanggh/MYchebconv/', train=True,download=False, transform=transforms.ToTensor())
+    testset = datasets.MNIST(root='/home/zhanggh/MYchebconv/', train=False,download=False, transform=transforms.ToTensor())
     train_pictures = 50000
     val_pictures = 60000-train_pictures
     trainset,valset = th.utils.data.random_split(trainset,[train_pictures,val_pictures])
