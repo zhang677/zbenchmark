@@ -1,19 +1,24 @@
 import torch.nn.functional as F
-import torch
-from utils.utils import EarlyStopping
+import torch as th
+from utils.util import EarlyStopping
 import time
 import numpy as np
 from sklearn.metrics import f1_score
+from nets.sage import SAGE
+from train.sample_train import load_subtensor
+from train.sample_train import compute_acc
+from train.sample_train import evaluate
+import dgl
 
 def accuracy(logits, labels):
-    _, indices = torch.max(logits, dim=1)
-    correct = torch.sum(indices == labels)
+    _, indices = th.max(logits, dim=1)
+    correct = th.sum(indices == labels)
     return correct.item() * 1.0 / len(labels)
 
 
-def evaluate(model, features, labels, mask):
+def gat_evaluate(model, features, labels, mask):
     model.eval()
-    with torch.no_grad():
+    with th.no_grad():
         logits = model(features)
         logits = logits[mask]
         labels = labels[mask]
@@ -32,9 +37,9 @@ def gat_run(data,gpu=-1,filename='result/gat_run.txt',num_out_heads=1,num_layers
 
     file = open(filename,'w')
     if gpu == -1:
-        device = torch.device('cpu')
+        device = th.device('cpu')
     else:
-        device = torch.device('cuda:%d' % gpu)
+        device = th.device('cuda:%d' % gpu)
 
     
     # Unpack the data
@@ -64,9 +69,9 @@ def gat_run(data,gpu=-1,filename='result/gat_run.txt',num_out_heads=1,num_layers
         stopper = EarlyStopping(patience=100)
 
     model=model.to(device)
-    loss_fcn = torch.nn.CrossEntropyLoss()
+    loss_fcn = th.nn.CrossEntropyLoss()
     # use optimizer
-    optimizer = torch.optim.Adam(
+    optimizer = th.optim.Adam(
         model.parameters(), lr=lr, weight_decay=weight_decay)
 
     # initialize graph
@@ -90,16 +95,16 @@ def gat_run(data,gpu=-1,filename='result/gat_run.txt',num_out_heads=1,num_layers
         
         if fastmode:
             val_acc = accuracy(logits[val_mask], labels[val_mask])
-            _, indices = torch.max(logits[val_mask], dim=1)
+            _, indices = th.max(logits[val_mask], dim=1)
             f1 = f1_score(labels[val_mask].cpu().numpy(), indices.cpu(), average='micro')
         else:
-            val_acc = evaluate(model, features, labels, val_mask)
-            _, indices = torch.max(logits[val_mask], dim=1)
+            val_acc = gat_evaluate(model, features, labels, val_mask)
+            _, indices = th.max(logits[val_mask], dim=1)
             f1 = f1_score(labels[val_mask].cpu().numpy(), indices.cpu(), average='micro')
             if early_stop:
                 if stopper.step(val_acc, model):
                     break
-        gpu_mem_alloc = torch.cuda.max_memory_allocated() / 1000000 if torch.cuda.is_available() else 0
+        gpu_mem_alloc = th.cuda.max_memory_allocated() / 1000000 if th.cuda.is_available() else 0
         print("Epoch {:05d} | Time(s) {:.4f} | Loss {:.4f} | TrainAcc {:.4f} |"
               " ValAcc {:.4f} | f1-score {:.4f} |ETputs(KTEPS) {:.2f}| GPU : {:.1f} MB ".
               format(epoch, np.mean(dur), loss.item(), train_acc,
@@ -107,9 +112,9 @@ def gat_run(data,gpu=-1,filename='result/gat_run.txt',num_out_heads=1,num_layers
 
     print()
     if early_stop:
-        model.load_state_dict(torch.load('es_checkpoint.pt')) # Earlystop不同文件间有耦合
-    acc = evaluate(model, features, labels, test_mask)
-    _, indices = torch.max(logits[test_mask], dim=1)
+        model.load_state_dict(th.load('es_checkpoint.pt')) # Earlystop不同文件间有耦合
+    acc = gat_evaluate(model, features, labels, test_mask)
+    _, indices = th.max(logits[test_mask], dim=1)
     f1 = f1_score(labels[test_mask].cpu().numpy(), indices.cpu(), average='micro')
     print("Test Accuracy {:.4f} | F1-score {:.4f}".format(acc,f1),file=file)
 
@@ -140,9 +145,9 @@ def cheb_coarsen_run(data,gpu=-1,pool_size=2,hidden_list=[16,32,64,128],k=2,lr=1
         return hit / tot
 
     if gpu == -1:
-        device = torch.device('cpu')
+        device = th.device('cpu')
     else:
-        device = torch.device('cuda:%d' % gpu)
+        device = th.device('cuda:%d' % gpu)
 
     if pool_size == 2:
         if len(hidden_list)!=coarsening_levels:
@@ -156,7 +161,7 @@ def cheb_coarsen_run(data,gpu=-1,pool_size=2,hidden_list=[16,32,64,128],k=2,lr=1
         raise RuntimeError("No support for pooling size %d now"%(pool_size))
 
     model = model.to(device)
-    optimizer = torch.optim.Adam(model.parameters(), lr=lr)
+    optimizer = th.optim.Adam(model.parameters(), lr=lr)
     for epoch in range(epoch_times):
         print('epoch {} starts'.format(epoch))
         model.train()
@@ -204,8 +209,128 @@ def cheb_coarsen_run(data,gpu=-1,pool_size=2,hidden_list=[16,32,64,128],k=2,lr=1
     acc = cheb_evaluate(model,val_loader,device)
     print('test acc: ', acc)
 
-def whole_run():
+def whole_sage_run(data_gpu,gpu,g,n_classes,filename = 'result/whole_sage_run.txt',num_epochs=20,eval_every=5,log_every=5,batch_size=32,lr=0.005,num_hidden=64,num_layers=2,dropout=0.0,shuffle=True,num_workers=4,drop_last=False):
     """
-    用来测试简单的每次都做全图的算法
+    Whole Sample(batch_size)
+    INPUT:
+    gpu : int : the number of device(-1 means 'cpu') 
+    g : DGLGraph : the whole graph
+    eval_every : int : use when evaluating
+    log_every : int : use when enumerating the dataloader
+    fan_out : str : 'int,int,...'
+    num_layers : int : must be consistent with fan_out
+    filename : str : file to save the training process
+
+    OUTPUT:
+    run the train
     """
+
+    file = open(filename,'w')
+    tic =time.time()
+    # Unpack data
+    if data_gpu != -1:
+        data_device = th.device('cuda:%d' % data_gpu)
+    else:
+        data_device = th.device('cpu')
+    features = g.ndata.pop('feat').to(data_device)
+    labels = g.ndata.pop('label').to(data_device)
+    in_feats = features.shape[1]
+
+    #通过mask获取nid的方法
+
+    train_nid = th.nonzero(g.ndata['train_mask'], as_tuple=True)[0]
+    val_nid = th.nonzero(g.ndata['val_mask'], as_tuple=True)[0]
+    test_nid = th.nonzero(~(g.ndata['train_mask'] | g.ndata['val_mask']), as_tuple=True)[0]
+    # Create PyTorch DataLoader for constructing blocks
+
+    # Define model and optimizer
+    model = SAGE(in_feats,num_hidden, n_classes,num_layers, len(g.etypes), F.relu, dropout)
+
+    if gpu==-1:
+        device = th.device('cpu')
+    else:
+        device = th.device('cuda:%d' % gpu)
+    sampler = dgl.dataloading.MultiLayerFullNeighborSampler(num_layers)
+    dataloader = dgl.dataloading.NodeDataLoader(
+        g,
+        th.arange(g.num_nodes()),
+        sampler,
+        batch_size=batch_size,
+        shuffle=shuffle,
+        drop_last=drop_last,
+        num_workers=num_workers)
+
+    model = model.to(device)
+    loss_fcn = th.nn.CrossEntropyLoss()
+    optimizer = th.optim.Adam(model.parameters(), lr=lr)
+
+    print("prepare model time : %.6f s"%(time.time()-tic))
+
+    print(model,file=file)
+    
+    #raise KeyError('144')
+    # Training loop
+    total_tic= time.time()
+    max_step = 0
+    avg = 0
+    total_train_time = 0
+    iter_tput_forward = []
+    iter_tput_backward = []
+    iter_tput = []
+    for epoch in range(num_epochs):
+        epoch_tic = time.time()
+        epoch_forward = 0
+        epoch_backward = 0
+        # Loop over the dataloader to sample the computation dependency graph as a list of
+        # blocks.
+        tic_step = time.time()
+        tic_step_forward = time.time()
+        for step, (input_nodes, seeds, gen_blocks) in enumerate(dataloader):
+            # Load the input features as well as output labels
+
+            batch_inputs, batch_labels = load_subtensor(features, labels,
+                                                        seeds, input_nodes, device)
+            blocks = []
+            tmp=0
+            for block in gen_blocks:
+                blocks.append(block.int().to(device))
+                tmp += block.num_edges()          
+            batch_pred = model(blocks, batch_inputs)
+            loss = loss_fcn(batch_pred, batch_labels)
+            iter_tput_forward.append(tmp / (time.time() - tic_step_forward))
+            epoch_forward += time.time() - tic_step_forward
+
+            tic_step_backward = time.time()
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            iter_tput_backward.append(tmp / (time.time() - tic_step_backward))
+            epoch_backward += time.time() - tic_step_backward
+
+            iter_tput.append(len(seeds) / (time.time() - tic_step))
+
+            if step % log_every == 0 : 
+                acc = compute_acc(batch_pred, batch_labels)
+                f1 = f1_score(batch_labels.cpu().numpy(),th.argmax(batch_pred.int(),dim=1).cpu().numpy(),average='micro')
+                gpu_mem_alloc = th.cuda.max_memory_allocated() / 1000000 if th.cuda.is_available() else 0
+                print('Epoch {:05d} | Step {:05d} | Loss {:.4f} | Train Acc {:.4f} | Train F1 {:.4f} | Speed (seeds/sec) {:.4f}| Forward Speed (edges/sec) {:.4f}|Backward Speed (edges/sec) {:.4f}|GPU {:.1f} MB'.format(
+                    epoch, step, loss.item(), acc.item(),f1, np.mean(iter_tput[3:]),np.mean(iter_tput_forward[3:]),np.mean(iter_tput_backward[3:]), gpu_mem_alloc),file=file)
+            tic_step = time.time()
+            tic_step_forward = time.time()
+            max_step=step
+
+        epoch_toc = time.time()
+        print('Epoch Time(s): {:.6f} | Total steps: {:4d} | Total forward time: {:.6f}s | Total backward time: {:.6f}s '.format(epoch_toc - epoch_tic,max_step,epoch_forward,epoch_backward),file=file)
+        total_train_time += epoch_toc - epoch_tic
+        if epoch >= 5:
+            avg += epoch_toc - epoch_tic
+        if epoch % eval_every == 0 and epoch != 0:
+            eval_time = time.time()
+            f1,eval_acc = evaluate(model, g, features, labels, val_nid, device,batch_size,num_workers)
+            print('Eval Acc {:.4f} | F1 {:.4f} | Eval time: {:.6f} s'.format(eval_acc,f1,time.time()-eval_time),file=file)
+    
+    test_time = time.time()
+    f1, test_acc = evaluate(model, g, features, labels, test_nid, device,batch_size,num_workers)
+    print('Test Acc: {:.4f}| F1: {:.4f}| Test time: {:.6f} s'.format(test_acc,f1,time.time()-test_time),file=file)
+    print('Avg epoch time(s): {:.4f} | F1 {:.4f} | Total epochs: {:4d} | Total Time: {:.6f} s | Total Train Time:{:.6f} s'.format(avg / (epoch - 4),f1,num_epochs,time.time()-total_tic,total_train_time),file=file)
 
