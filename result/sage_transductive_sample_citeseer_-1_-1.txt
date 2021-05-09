@@ -1,0 +1,456 @@
+SAGE(
+  (layers): ModuleList(
+    (0): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_self): Linear(in_features=3703, out_features=32, bias=True)
+      (fc_neigh): Linear(in_features=3703, out_features=32, bias=True)
+    )
+    (1): SAGEConv(
+      (feat_drop): Dropout(p=0.0, inplace=False)
+      (fc_self): Linear(in_features=32, out_features=6, bias=True)
+      (fc_neigh): Linear(in_features=32, out_features=6, bias=True)
+    )
+  )
+  (dropout): Dropout(p=0.0, inplace=False)
+)
+Epoch 00000 | Step 00000 | Loss 1.8221 | Train Acc 0.1562 | Train F1 0.1562 | Speed (seeds/sec) nan| Forward Speed (edges/sec) nan|Backward Speed (edges/sec) nan|GPU 0.0 MB
+Epoch Time(s): 3.840113 | Total steps:    2 | Total forward time: 0.564478s | Total backward time: 2.820444s 
+Epoch 00001 | Step 00000 | Loss 1.7351 | Train Acc 0.5312 | Train F1 0.2812 | Speed (seeds/sec) 45.4107| Forward Speed (edges/sec) 1481.7930|Backward Speed (edges/sec) 1649.3138|GPU 0.0 MB
+Epoch Time(s): 1.822308 | Total steps:    2 | Total forward time: 0.733231s | Total backward time: 1.068111s 
+Epoch 00002 | Step 00000 | Loss 1.6808 | Train Acc 0.5312 | Train F1 0.2500 | Speed (seeds/sec) 52.6122| Forward Speed (edges/sec) 2173.2592|Backward Speed (edges/sec) 1513.3301|GPU 0.0 MB
+Epoch Time(s): 1.934320 | Total steps:    2 | Total forward time: 0.875450s | Total backward time: 1.033926s 
+Epoch 00003 | Step 00000 | Loss 1.6036 | Train Acc 0.7500 | Train F1 0.0625 | Speed (seeds/sec) 52.3488| Forward Speed (edges/sec) 1895.1978|Backward Speed (edges/sec) 1542.7221|GPU 0.0 MB
+Epoch Time(s): 1.938898 | Total steps:    2 | Total forward time: 0.920627s | Total backward time: 0.993298s 
+Epoch 00004 | Step 00000 | Loss 1.5174 | Train Acc 0.9062 | Train F1 0.1562 | Speed (seeds/sec) 50.9973| Forward Speed (edges/sec) 1792.0566|Backward Speed (edges/sec) 1438.4584|GPU 0.0 MB
+Epoch Time(s): 1.762079 | Total steps:    2 | Total forward time: 0.918667s | Total backward time: 0.822760s 
+Epoch 00005 | Step 00000 | Loss 1.4297 | Train Acc 0.9688 | Train F1 0.1250 | Speed (seeds/sec) 53.3791| Forward Speed (edges/sec) 1756.2730|Backward Speed (edges/sec) 1579.3714|GPU 0.0 MB
+Epoch Time(s): 1.380402 | Total steps:    2 | Total forward time: 0.666151s | Total backward time: 0.678907s 
+Eval Acc 0.5600 | F1 0.0580 | Eval time: 18.974838 s
+Epoch 00006 | Step 00000 | Loss 1.3229 | Train Acc 1.0000 | Train F1 0.2188 | Speed (seeds/sec) 60.1654| Forward Speed (edges/sec) 1967.9790|Backward Speed (edges/sec) 1916.8803|GPU 0.0 MB
+Epoch Time(s): 1.162718 | Total steps:    2 | Total forward time: 0.566011s | Total backward time: 0.577451s 
+Epoch 00007 | Step 00000 | Loss 1.2104 | Train Acc 1.0000 | Train F1 0.2500 | Speed (seeds/sec) 63.2764| Forward Speed (edges/sec) 2022.1585|Backward Speed (edges/sec) 1963.1957|GPU 0.0 MB
+Epoch Time(s): 1.123424 | Total steps:    2 | Total forward time: 0.621229s | Total backward time: 0.474449s 
+Epoch 00008 | Step 00000 | Loss 1.0985 | Train Acc 1.0000 | Train F1 0.5938 | Speed (seeds/sec) 65.7664| Forward Speed (edges/sec) 2156.0046|Backward Speed (edges/sec) 2025.2480|GPU 0.0 MB
+Epoch Time(s): 1.500261 | Total steps:    2 | Total forward time: 0.732660s | Total backward time: 0.746595s 
+Epoch 00009 | Step 00000 | Loss 0.9866 | Train Acc 1.0000 | Train F1 0.7500 | Speed (seeds/sec) 67.5718| Forward Speed (edges/sec) 2176.2007|Backward Speed (edges/sec) 2098.9256|GPU 0.0 MB
+Epoch Time(s): 1.005061 | Total steps:    2 | Total forward time: 0.522074s | Total backward time: 0.461276s 
+Epoch 00010 | Step 00000 | Loss 0.9351 | Train Acc 1.0000 | Train F1 0.7812 | Speed (seeds/sec) 72.2803| Forward Speed (edges/sec) 2472.0196|Backward Speed (edges/sec) 2281.1342|GPU 0.0 MB
+Epoch Time(s): 1.391371 | Total steps:    2 | Total forward time: 0.731601s | Total backward time: 0.641221s 
+Eval Acc 0.6720 | F1 0.1420 | Eval time: 15.490376 s
+Epoch 00011 | Step 00000 | Loss 0.7802 | Train Acc 0.9688 | Train F1 0.8750 | Speed (seeds/sec) 72.8995| Forward Speed (edges/sec) 2464.7616|Backward Speed (edges/sec) 2266.2969|GPU 0.0 MB
+Epoch Time(s): 1.261293 | Total steps:    2 | Total forward time: 0.467061s | Total backward time: 0.727872s 
+Epoch 00012 | Step 00000 | Loss 0.6334 | Train Acc 0.9688 | Train F1 0.9688 | Speed (seeds/sec) 72.8105| Forward Speed (edges/sec) 2492.0584|Backward Speed (edges/sec) 2219.8656|GPU 0.0 MB
+Epoch Time(s): 1.538405 | Total steps:    2 | Total forward time: 0.658350s | Total backward time: 0.841296s 
+Epoch 00013 | Step 00000 | Loss 0.5738 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 72.3337| Forward Speed (edges/sec) 2499.2526|Backward Speed (edges/sec) 2187.4993|GPU 0.0 MB
+Epoch Time(s): 1.443893 | Total steps:    2 | Total forward time: 0.552754s | Total backward time: 0.863125s 
+Epoch 00014 | Step 00000 | Loss 0.5165 | Train Acc 1.0000 | Train F1 0.9688 | Speed (seeds/sec) 72.0645| Forward Speed (edges/sec) 2809.6622|Backward Speed (edges/sec) 2145.5929|GPU 0.0 MB
+Epoch Time(s): 1.529702 | Total steps:    2 | Total forward time: 0.807914s | Total backward time: 0.687756s 
+Epoch 00015 | Step 00000 | Loss 0.4022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 74.1295| Forward Speed (edges/sec) 2774.8696|Backward Speed (edges/sec) 2405.8122|GPU 0.0 MB
+Epoch Time(s): 1.603411 | Total steps:    2 | Total forward time: 0.799885s | Total backward time: 0.756273s 
+Eval Acc 0.6780 | F1 0.3600 | Eval time: 19.189390 s
+Epoch 00016 | Step 00000 | Loss 0.3377 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 72.9399| Forward Speed (edges/sec) 2720.3195|Backward Speed (edges/sec) 2344.7297|GPU 0.0 MB
+Epoch Time(s): 1.633393 | Total steps:    2 | Total forward time: 0.758369s | Total backward time: 0.839728s 
+Epoch 00017 | Step 00000 | Loss 0.3377 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 73.4419| Forward Speed (edges/sec) 2694.9436|Backward Speed (edges/sec) 2346.6372|GPU 0.0 MB
+Epoch Time(s): 1.467327 | Total steps:    2 | Total forward time: 0.705815s | Total backward time: 0.681378s 
+Epoch 00018 | Step 00000 | Loss 0.2490 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 73.4714| Forward Speed (edges/sec) 2667.5797|Backward Speed (edges/sec) 2353.1431|GPU 0.0 MB
+Epoch Time(s): 1.544082 | Total steps:    2 | Total forward time: 0.735007s | Total backward time: 0.785084s 
+Epoch 00019 | Step 00000 | Loss 0.2270 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 73.0075| Forward Speed (edges/sec) 2633.7793|Backward Speed (edges/sec) 2323.8273|GPU 0.0 MB
+Epoch Time(s): 1.251121 | Total steps:    2 | Total forward time: 0.515021s | Total backward time: 0.708775s 
+Epoch 00020 | Step 00000 | Loss 0.2034 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 73.7375| Forward Speed (edges/sec) 2695.0977|Backward Speed (edges/sec) 2315.2194|GPU 0.0 MB
+Epoch Time(s): 1.148617 | Total steps:    2 | Total forward time: 0.460129s | Total backward time: 0.635825s 
+Eval Acc 0.6860 | F1 0.4940 | Eval time: 22.680810 s
+Epoch 00021 | Step 00000 | Loss 0.1757 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 74.3703| Forward Speed (edges/sec) 2753.5399|Backward Speed (edges/sec) 2297.0664|GPU 0.0 MB
+Epoch Time(s): 2.248061 | Total steps:    2 | Total forward time: 0.873049s | Total backward time: 1.318486s 
+Epoch 00022 | Step 00000 | Loss 0.1357 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 72.7207| Forward Speed (edges/sec) 2696.3639|Backward Speed (edges/sec) 2241.7830|GPU 0.0 MB
+Epoch Time(s): 2.303571 | Total steps:    2 | Total forward time: 1.258698s | Total backward time: 1.001418s 
+Epoch 00023 | Step 00000 | Loss 0.1175 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 71.4123| Forward Speed (edges/sec) 2634.4743|Backward Speed (edges/sec) 2200.6092|GPU 0.0 MB
+Epoch Time(s): 2.206474 | Total steps:    2 | Total forward time: 0.938920s | Total backward time: 1.242070s 
+Epoch 00024 | Step 00000 | Loss 0.1168 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 70.3820| Forward Speed (edges/sec) 2594.1836|Backward Speed (edges/sec) 2156.4197|GPU 0.0 MB
+Epoch Time(s): 1.932438 | Total steps:    2 | Total forward time: 0.711586s | Total backward time: 1.198974s 
+Epoch 00025 | Step 00000 | Loss 0.0915 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 69.7506| Forward Speed (edges/sec) 2586.0937|Backward Speed (edges/sec) 2127.7122|GPU 0.0 MB
+Epoch Time(s): 1.807110 | Total steps:    2 | Total forward time: 0.858815s | Total backward time: 0.924645s 
+Eval Acc 0.6720 | F1 0.5420 | Eval time: 26.881276 s
+Epoch 00026 | Step 00000 | Loss 0.0927 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 69.0549| Forward Speed (edges/sec) 2582.3648|Backward Speed (edges/sec) 2095.4861|GPU 0.0 MB
+Epoch Time(s): 2.501839 | Total steps:    2 | Total forward time: 1.081401s | Total backward time: 1.373865s 
+Epoch 00027 | Step 00000 | Loss 0.0766 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 67.9491| Forward Speed (edges/sec) 2539.4152|Backward Speed (edges/sec) 2054.5443|GPU 0.0 MB
+Epoch Time(s): 2.293096 | Total steps:    2 | Total forward time: 1.005910s | Total backward time: 1.218253s 
+Epoch 00028 | Step 00000 | Loss 0.0592 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 67.1454| Forward Speed (edges/sec) 2510.4335|Backward Speed (edges/sec) 2023.8543|GPU 0.0 MB
+Epoch Time(s): 1.900180 | Total steps:    2 | Total forward time: 0.795717s | Total backward time: 1.076993s 
+Epoch 00029 | Step 00000 | Loss 0.0569 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 66.8830| Forward Speed (edges/sec) 2519.4751|Backward Speed (edges/sec) 2008.3513|GPU 0.0 MB
+Epoch Time(s): 1.935180 | Total steps:    2 | Total forward time: 1.044704s | Total backward time: 0.852267s 
+Epoch 00030 | Step 00000 | Loss 0.0572 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 66.2259| Forward Speed (edges/sec) 2490.2767|Backward Speed (edges/sec) 1997.5164|GPU 0.0 MB
+Epoch Time(s): 2.072033 | Total steps:    2 | Total forward time: 0.816952s | Total backward time: 1.211006s 
+Eval Acc 0.6700 | F1 0.5820 | Eval time: 30.153834 s
+Epoch 00031 | Step 00000 | Loss 0.0604 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 65.5220| Forward Speed (edges/sec) 2468.0977|Backward Speed (edges/sec) 1967.4168|GPU 0.0 MB
+Epoch Time(s): 2.544263 | Total steps:    2 | Total forward time: 1.180954s | Total backward time: 1.302384s 
+Epoch 00032 | Step 00000 | Loss 0.0432 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 64.7488| Forward Speed (edges/sec) 2429.4053|Backward Speed (edges/sec) 1941.1487|GPU 0.0 MB
+Epoch Time(s): 2.257061 | Total steps:    2 | Total forward time: 1.070049s | Total backward time: 1.134171s 
+Epoch 00033 | Step 00000 | Loss 0.0428 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 64.1876| Forward Speed (edges/sec) 2403.4606|Backward Speed (edges/sec) 1923.5743|GPU 0.0 MB
+Epoch Time(s): 2.268831 | Total steps:    2 | Total forward time: 1.102132s | Total backward time: 1.127312s 
+Epoch 00034 | Step 00000 | Loss 0.0454 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 63.6574| Forward Speed (edges/sec) 2376.5490|Backward Speed (edges/sec) 1901.0782|GPU 0.0 MB
+Epoch Time(s): 2.216177 | Total steps:    2 | Total forward time: 0.974716s | Total backward time: 1.217468s 
+Epoch 00035 | Step 00000 | Loss 0.0485 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 63.0075| Forward Speed (edges/sec) 2350.0554|Backward Speed (edges/sec) 1881.6637|GPU 0.0 MB
+Epoch Time(s): 2.527205 | Total steps:    2 | Total forward time: 0.989135s | Total backward time: 1.499512s 
+Eval Acc 0.6660 | F1 0.5800 | Eval time: 25.741170 s
+Epoch 00036 | Step 00000 | Loss 0.0322 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 62.3095| Forward Speed (edges/sec) 2321.7137|Backward Speed (edges/sec) 1852.1589|GPU 0.0 MB
+Epoch Time(s): 2.504956 | Total steps:    2 | Total forward time: 1.224272s | Total backward time: 1.228648s 
+Epoch 00037 | Step 00000 | Loss 0.0303 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 61.7827| Forward Speed (edges/sec) 2297.5157|Backward Speed (edges/sec) 1835.7309|GPU 0.0 MB
+Epoch Time(s): 2.181006 | Total steps:    2 | Total forward time: 0.998724s | Total backward time: 1.146880s 
+Epoch 00038 | Step 00000 | Loss 0.0292 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 61.3440| Forward Speed (edges/sec) 2276.7803|Backward Speed (edges/sec) 1817.8066|GPU 0.0 MB
+Epoch Time(s): 2.875622 | Total steps:    2 | Total forward time: 1.155095s | Total backward time: 1.638151s 
+Epoch 00039 | Step 00000 | Loss 0.0331 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 60.6203| Forward Speed (edges/sec) 2253.2635|Backward Speed (edges/sec) 1793.7131|GPU 0.0 MB
+Epoch Time(s): 3.218907 | Total steps:    2 | Total forward time: 1.365342s | Total backward time: 1.805294s 
+Epoch 00040 | Step 00000 | Loss 0.0271 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 59.8869| Forward Speed (edges/sec) 2224.3712|Backward Speed (edges/sec) 1768.3457|GPU 0.0 MB
+Epoch Time(s): 2.677258 | Total steps:    2 | Total forward time: 1.163128s | Total backward time: 1.480010s 
+Eval Acc 0.6720 | F1 0.6000 | Eval time: 37.106078 s
+Epoch 00041 | Step 00000 | Loss 0.0268 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 59.2838| Forward Speed (edges/sec) 2205.9480|Backward Speed (edges/sec) 1748.1062|GPU 0.0 MB
+Epoch Time(s): 3.358654 | Total steps:    2 | Total forward time: 1.543262s | Total backward time: 1.730114s 
+Epoch 00042 | Step 00000 | Loss 0.0252 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 58.6263| Forward Speed (edges/sec) 2178.4356|Backward Speed (edges/sec) 1729.4722|GPU 0.0 MB
+Epoch Time(s): 2.390836 | Total steps:    2 | Total forward time: 1.144712s | Total backward time: 1.202336s 
+Epoch 00043 | Step 00000 | Loss 0.0330 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 58.3842| Forward Speed (edges/sec) 2168.8589|Backward Speed (edges/sec) 1723.2752|GPU 0.0 MB
+Epoch Time(s): 1.670811 | Total steps:    2 | Total forward time: 0.666274s | Total backward time: 0.935163s 
+Epoch 00044 | Step 00000 | Loss 0.0201 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 58.7914| Forward Speed (edges/sec) 2205.9107|Backward Speed (edges/sec) 1726.5636|GPU 0.0 MB
+Epoch Time(s): 2.231151 | Total steps:    2 | Total forward time: 1.092445s | Total backward time: 1.052524s 
+Epoch 00045 | Step 00000 | Loss 0.0232 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 58.4486| Forward Speed (edges/sec) 2182.7998|Backward Speed (edges/sec) 1713.6797|GPU 0.0 MB
+Epoch Time(s): 2.339467 | Total steps:    2 | Total forward time: 0.922565s | Total backward time: 1.357811s 
+Eval Acc 0.6620 | F1 0.6000 | Eval time: 33.693500 s
+Epoch 00046 | Step 00000 | Loss 0.0187 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 58.1413| Forward Speed (edges/sec) 2184.9846|Backward Speed (edges/sec) 1703.7065|GPU 0.0 MB
+Epoch Time(s): 2.267878 | Total steps:    2 | Total forward time: 1.109293s | Total backward time: 1.126944s 
+Epoch 00047 | Step 00000 | Loss 0.0182 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.8585| Forward Speed (edges/sec) 2171.5525|Backward Speed (edges/sec) 1694.5331|GPU 0.0 MB
+Epoch Time(s): 2.274756 | Total steps:    2 | Total forward time: 1.087131s | Total backward time: 1.130563s 
+Epoch 00048 | Step 00000 | Loss 0.0180 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.5937| Forward Speed (edges/sec) 2160.2295|Backward Speed (edges/sec) 1685.7619|GPU 0.0 MB
+Epoch Time(s): 2.204351 | Total steps:    2 | Total forward time: 0.881156s | Total backward time: 1.291471s 
+Epoch 00049 | Step 00000 | Loss 0.0154 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.4154| Forward Speed (edges/sec) 2164.2164|Backward Speed (edges/sec) 1676.0243|GPU 0.0 MB
+Epoch Time(s): 1.866237 | Total steps:    2 | Total forward time: 0.963596s | Total backward time: 0.876112s 
+Epoch 00050 | Step 00000 | Loss 0.0159 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.4317| Forward Speed (edges/sec) 2154.7187|Backward Speed (edges/sec) 1679.4453|GPU 0.0 MB
+Epoch Time(s): 1.303903 | Total steps:    2 | Total forward time: 0.654626s | Total backward time: 0.616645s 
+Eval Acc 0.6740 | F1 0.6080 | Eval time: 24.784735 s
+Epoch 00051 | Step 00000 | Loss 0.0165 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 58.0081| Forward Speed (edges/sec) 2166.6362|Backward Speed (edges/sec) 1699.5259|GPU 0.0 MB
+Epoch Time(s): 2.139309 | Total steps:    2 | Total forward time: 1.058183s | Total backward time: 1.026488s 
+Epoch 00052 | Step 00000 | Loss 0.0142 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.8147| Forward Speed (edges/sec) 2152.6899|Backward Speed (edges/sec) 1692.0588|GPU 0.0 MB
+Epoch Time(s): 2.538356 | Total steps:    2 | Total forward time: 1.352215s | Total backward time: 1.123085s 
+Epoch 00053 | Step 00000 | Loss 0.0147 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.4767| Forward Speed (edges/sec) 2133.7357|Backward Speed (edges/sec) 1681.0713|GPU 0.0 MB
+Epoch Time(s): 2.430393 | Total steps:    2 | Total forward time: 1.131466s | Total backward time: 1.248067s 
+Epoch 00054 | Step 00000 | Loss 0.0131 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.2231| Forward Speed (edges/sec) 2116.3533|Backward Speed (edges/sec) 1674.3103|GPU 0.0 MB
+Epoch Time(s): 1.940701 | Total steps:    2 | Total forward time: 1.001982s | Total backward time: 0.918397s 
+Epoch 00055 | Step 00000 | Loss 0.0141 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 57.1465| Forward Speed (edges/sec) 2109.0840|Backward Speed (edges/sec) 1679.2030|GPU 0.0 MB
+Epoch Time(s): 1.955574 | Total steps:    2 | Total forward time: 0.919686s | Total backward time: 0.984838s 
+Eval Acc 0.6700 | F1 0.6120 | Eval time: 28.555906 s
+Epoch 00056 | Step 00000 | Loss 0.0153 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.9805| Forward Speed (edges/sec) 2098.6639|Backward Speed (edges/sec) 1671.7354|GPU 0.0 MB
+Epoch Time(s): 2.234089 | Total steps:    2 | Total forward time: 1.020288s | Total backward time: 1.182630s 
+Epoch 00057 | Step 00000 | Loss 0.0127 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.7593| Forward Speed (edges/sec) 2087.7950|Backward Speed (edges/sec) 1664.0064|GPU 0.0 MB
+Epoch Time(s): 2.217265 | Total steps:    2 | Total forward time: 0.961183s | Total backward time: 1.227483s 
+Epoch 00058 | Step 00000 | Loss 0.0119 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.5537| Forward Speed (edges/sec) 2079.6607|Backward Speed (edges/sec) 1653.4008|GPU 0.0 MB
+Epoch Time(s): 2.330388 | Total steps:    2 | Total forward time: 1.116693s | Total backward time: 1.163852s 
+Epoch 00059 | Step 00000 | Loss 0.0133 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.4728| Forward Speed (edges/sec) 2072.9576|Backward Speed (edges/sec) 1656.7304|GPU 0.0 MB
+Epoch Time(s): 1.699046 | Total steps:    2 | Total forward time: 0.780829s | Total backward time: 0.857970s 
+Epoch 00060 | Step 00000 | Loss 0.0129 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.4268| Forward Speed (edges/sec) 2065.0720|Backward Speed (edges/sec) 1652.0446|GPU 0.0 MB
+Epoch Time(s): 2.186448 | Total steps:    2 | Total forward time: 0.939527s | Total backward time: 1.191232s 
+Eval Acc 0.6700 | F1 0.6120 | Eval time: 28.882424 s
+Epoch 00061 | Step 00000 | Loss 0.0123 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.1515| Forward Speed (edges/sec) 2053.1515|Backward Speed (edges/sec) 1641.9980|GPU 0.0 MB
+Epoch Time(s): 2.730407 | Total steps:    2 | Total forward time: 1.238058s | Total backward time: 1.425970s 
+Epoch 00062 | Step 00000 | Loss 0.0106 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 55.8848| Forward Speed (edges/sec) 2038.5293|Backward Speed (edges/sec) 1630.0660|GPU 0.0 MB
+Epoch Time(s): 2.259532 | Total steps:    2 | Total forward time: 1.173122s | Total backward time: 1.053927s 
+Epoch 00063 | Step 00000 | Loss 0.0119 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 55.9267| Forward Speed (edges/sec) 2031.8128|Backward Speed (edges/sec) 1642.3696|GPU 0.0 MB
+Epoch Time(s): 1.257420 | Total steps:    2 | Total forward time: 0.577973s | Total backward time: 0.652487s 
+Epoch 00064 | Step 00000 | Loss 0.0091 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 56.1079| Forward Speed (edges/sec) 2039.6646|Backward Speed (edges/sec) 1641.4979|GPU 0.0 MB
+Epoch Time(s): 2.209903 | Total steps:    2 | Total forward time: 0.854332s | Total backward time: 1.275508s 
+Epoch 00065 | Step 00000 | Loss 0.0094 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 55.9102| Forward Speed (edges/sec) 2035.8166|Backward Speed (edges/sec) 1632.6681|GPU 0.0 MB
+Epoch Time(s): 2.540177 | Total steps:    2 | Total forward time: 0.936469s | Total backward time: 1.558453s 
+Eval Acc 0.6680 | F1 0.6080 | Eval time: 31.721671 s
+Epoch 00066 | Step 00000 | Loss 0.0099 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 55.6430| Forward Speed (edges/sec) 2028.3780|Backward Speed (edges/sec) 1621.8157|GPU 0.0 MB
+Epoch Time(s): 2.489767 | Total steps:    2 | Total forward time: 1.159510s | Total backward time: 1.291606s 
+Epoch 00067 | Step 00000 | Loss 0.0081 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 55.4396| Forward Speed (edges/sec) 2021.6111|Backward Speed (edges/sec) 1615.2451|GPU 0.0 MB
+Epoch Time(s): 2.764555 | Total steps:    2 | Total forward time: 1.220920s | Total backward time: 1.461760s 
+Epoch 00068 | Step 00000 | Loss 0.0086 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 55.1535| Forward Speed (edges/sec) 2010.0472|Backward Speed (edges/sec) 1607.1212|GPU 0.0 MB
+Epoch Time(s): 2.988689 | Total steps:    2 | Total forward time: 1.448074s | Total backward time: 1.495385s 
+Epoch 00069 | Step 00000 | Loss 0.0111 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 54.8259| Forward Speed (edges/sec) 1997.1161|Backward Speed (edges/sec) 1596.9440|GPU 0.0 MB
+Epoch Time(s): 3.091706 | Total steps:    2 | Total forward time: 1.437696s | Total backward time: 1.609468s 
+Epoch 00070 | Step 00000 | Loss 0.0088 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 54.4749| Forward Speed (edges/sec) 1981.4629|Backward Speed (edges/sec) 1585.4130|GPU 0.0 MB
+Epoch Time(s): 3.266503 | Total steps:    2 | Total forward time: 1.606614s | Total backward time: 1.562171s 
+Eval Acc 0.6740 | F1 0.6160 | Eval time: 43.971481 s
+Epoch 00071 | Step 00000 | Loss 0.0093 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 54.1622| Forward Speed (edges/sec) 1967.3191|Backward Speed (edges/sec) 1576.4101|GPU 0.0 MB
+Epoch Time(s): 3.063877 | Total steps:    2 | Total forward time: 1.464490s | Total backward time: 1.556511s 
+Epoch 00072 | Step 00000 | Loss 0.0109 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 53.9288| Forward Speed (edges/sec) 1958.6645|Backward Speed (edges/sec) 1569.0660|GPU 0.0 MB
+Epoch Time(s): 3.305453 | Total steps:    2 | Total forward time: 1.271345s | Total backward time: 1.965643s 
+Epoch 00073 | Step 00000 | Loss 0.0075 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 53.5962| Forward Speed (edges/sec) 1946.6186|Backward Speed (edges/sec) 1555.9437|GPU 0.0 MB
+Epoch Time(s): 2.970521 | Total steps:    2 | Total forward time: 1.187636s | Total backward time: 1.745654s 
+Epoch 00074 | Step 00000 | Loss 0.0083 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 53.3248| Forward Speed (edges/sec) 1936.4461|Backward Speed (edges/sec) 1546.5062|GPU 0.0 MB
+Epoch Time(s): 3.219134 | Total steps:    2 | Total forward time: 1.515483s | Total backward time: 1.655473s 
+Epoch 00075 | Step 00000 | Loss 0.0089 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 53.0362| Forward Speed (edges/sec) 1924.6941|Backward Speed (edges/sec) 1538.2963|GPU 0.0 MB
+Epoch Time(s): 3.302154 | Total steps:    2 | Total forward time: 1.565892s | Total backward time: 1.703563s 
+Eval Acc 0.6740 | F1 0.6180 | Eval time: 44.756419 s
+Epoch 00076 | Step 00000 | Loss 0.0083 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 52.7345| Forward Speed (edges/sec) 1911.4465|Backward Speed (edges/sec) 1527.8439|GPU 0.0 MB
+Epoch Time(s): 3.014387 | Total steps:    2 | Total forward time: 1.499001s | Total backward time: 1.469364s 
+Epoch 00077 | Step 00000 | Loss 0.0084 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 52.5036| Forward Speed (edges/sec) 1898.5922|Backward Speed (edges/sec) 1520.2678|GPU 0.0 MB
+Epoch Time(s): 2.583388 | Total steps:    2 | Total forward time: 1.073837s | Total backward time: 1.435212s 
+Epoch 00078 | Step 00000 | Loss 0.0081 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 52.3403| Forward Speed (edges/sec) 1892.1823|Backward Speed (edges/sec) 1513.7608|GPU 0.0 MB
+Epoch Time(s): 2.733815 | Total steps:    2 | Total forward time: 1.296980s | Total backward time: 1.408390s 
+Epoch 00079 | Step 00000 | Loss 0.0066 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 52.1285| Forward Speed (edges/sec) 1882.2700|Backward Speed (edges/sec) 1506.9802|GPU 0.0 MB
+Epoch Time(s): 2.525575 | Total steps:    2 | Total forward time: 1.158366s | Total backward time: 1.295871s 
+Epoch 00080 | Step 00000 | Loss 0.0066 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 51.9707| Forward Speed (edges/sec) 1873.7407|Backward Speed (edges/sec) 1500.7412|GPU 0.0 MB
+Epoch Time(s): 2.348731 | Total steps:    2 | Total forward time: 0.946281s | Total backward time: 1.368417s 
+Eval Acc 0.6720 | F1 0.6160 | Eval time: 44.269060 s
+Epoch 00081 | Step 00000 | Loss 0.0073 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 51.8395| Forward Speed (edges/sec) 1877.5342|Backward Speed (edges/sec) 1494.8975|GPU 0.0 MB
+Epoch Time(s): 3.208282 | Total steps:    2 | Total forward time: 1.441287s | Total backward time: 1.697532s 
+Epoch 00082 | Step 00000 | Loss 0.0071 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 51.5805| Forward Speed (edges/sec) 1866.1272|Backward Speed (edges/sec) 1486.7600|GPU 0.0 MB
+Epoch Time(s): 3.038883 | Total steps:    2 | Total forward time: 1.293237s | Total backward time: 1.715595s 
+Epoch 00083 | Step 00000 | Loss 0.0066 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 51.3953| Forward Speed (edges/sec) 1861.0214|Backward Speed (edges/sec) 1479.3586|GPU 0.0 MB
+Epoch Time(s): 2.834852 | Total steps:    2 | Total forward time: 1.346464s | Total backward time: 1.440441s 
+Epoch 00084 | Step 00000 | Loss 0.0067 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 51.1925| Forward Speed (edges/sec) 1853.6856|Backward Speed (edges/sec) 1473.7090|GPU 0.0 MB
+Epoch Time(s): 3.000212 | Total steps:    2 | Total forward time: 1.230839s | Total backward time: 1.713679s 
+Epoch 00085 | Step 00000 | Loss 0.0070 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 50.9421| Forward Speed (edges/sec) 1844.7390|Backward Speed (edges/sec) 1465.2883|GPU 0.0 MB
+Epoch Time(s): 3.189572 | Total steps:    2 | Total forward time: 1.459223s | Total backward time: 1.672576s 
+Eval Acc 0.6660 | F1 0.6160 | Eval time: 40.234090 s
+Epoch 00086 | Step 00000 | Loss 0.0054 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 50.7517| Forward Speed (edges/sec) 1836.3886|Backward Speed (edges/sec) 1458.0692|GPU 0.0 MB
+Epoch Time(s): 3.164395 | Total steps:    2 | Total forward time: 1.335301s | Total backward time: 1.791966s 
+Epoch 00087 | Step 00000 | Loss 0.0052 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 50.5430| Forward Speed (edges/sec) 1827.5486|Backward Speed (edges/sec) 1451.0085|GPU 0.0 MB
+Epoch Time(s): 2.770876 | Total steps:    2 | Total forward time: 1.200650s | Total backward time: 1.467798s 
+Epoch 00088 | Step 00000 | Loss 0.0068 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 50.3483| Forward Speed (edges/sec) 1819.9787|Backward Speed (edges/sec) 1446.5655|GPU 0.0 MB
+Epoch Time(s): 3.169002 | Total steps:    2 | Total forward time: 1.648188s | Total backward time: 1.496496s 
+Epoch 00089 | Step 00000 | Loss 0.0049 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 50.1252| Forward Speed (edges/sec) 1808.6741|Backward Speed (edges/sec) 1439.2708|GPU 0.0 MB
+Epoch Time(s): 3.275701 | Total steps:    2 | Total forward time: 1.516007s | Total backward time: 1.685703s 
+Epoch 00090 | Step 00000 | Loss 0.0048 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.9349| Forward Speed (edges/sec) 1800.7124|Backward Speed (edges/sec) 1433.3347|GPU 0.0 MB
+Epoch Time(s): 2.998513 | Total steps:    2 | Total forward time: 1.399462s | Total backward time: 1.489503s 
+Eval Acc 0.6680 | F1 0.6200 | Eval time: 41.222275 s
+Epoch 00091 | Step 00000 | Loss 0.0055 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.7107| Forward Speed (edges/sec) 1791.7276|Backward Speed (edges/sec) 1427.4407|GPU 0.0 MB
+Epoch Time(s): 3.384020 | Total steps:    2 | Total forward time: 1.561116s | Total backward time: 1.740474s 
+Epoch 00092 | Step 00000 | Loss 0.0050 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.5128| Forward Speed (edges/sec) 1782.1338|Backward Speed (edges/sec) 1420.7456|GPU 0.0 MB
+Epoch Time(s): 3.414685 | Total steps:    2 | Total forward time: 1.491277s | Total backward time: 1.899928s 
+Epoch 00093 | Step 00000 | Loss 0.0052 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.2984| Forward Speed (edges/sec) 1775.0760|Backward Speed (edges/sec) 1414.7436|GPU 0.0 MB
+Epoch Time(s): 2.594474 | Total steps:    2 | Total forward time: 1.175509s | Total backward time: 1.379186s 
+Epoch 00094 | Step 00000 | Loss 0.0054 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.1790| Forward Speed (edges/sec) 1772.1457|Backward Speed (edges/sec) 1409.8131|GPU 0.0 MB
+Epoch Time(s): 2.906804 | Total steps:    2 | Total forward time: 1.364362s | Total backward time: 1.473178s 
+Epoch 00095 | Step 00000 | Loss 0.0053 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.0221| Forward Speed (edges/sec) 1764.7637|Backward Speed (edges/sec) 1405.1373|GPU 0.0 MB
+Epoch Time(s): 3.074551 | Total steps:    2 | Total forward time: 1.232667s | Total backward time: 1.804878s 
+Eval Acc 0.6680 | F1 0.6200 | Eval time: 37.959862 s
+Epoch 00096 | Step 00000 | Loss 0.0048 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.8161| Forward Speed (edges/sec) 1758.1871|Backward Speed (edges/sec) 1397.9786|GPU 0.0 MB
+Epoch Time(s): 3.570421 | Total steps:    2 | Total forward time: 1.605678s | Total backward time: 1.915372s 
+Epoch 00097 | Step 00000 | Loss 0.0038 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.6211| Forward Speed (edges/sec) 1747.9494|Backward Speed (edges/sec) 1389.6953|GPU 0.0 MB
+Epoch Time(s): 3.339540 | Total steps:    2 | Total forward time: 1.485522s | Total backward time: 1.817155s 
+Epoch 00098 | Step 00000 | Loss 0.0044 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.4691| Forward Speed (edges/sec) 1742.2704|Backward Speed (edges/sec) 1386.1674|GPU 0.0 MB
+Epoch Time(s): 2.095354 | Total steps:    2 | Total forward time: 0.949678s | Total backward time: 1.094845s 
+Epoch 00099 | Step 00000 | Loss 0.0046 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.4374| Forward Speed (edges/sec) 1743.6339|Backward Speed (edges/sec) 1384.0678|GPU 0.0 MB
+Epoch Time(s): 3.221921 | Total steps:    2 | Total forward time: 1.370209s | Total backward time: 1.804869s 
+Epoch 00100 | Step 00000 | Loss 0.0042 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.2438| Forward Speed (edges/sec) 1735.3939|Backward Speed (edges/sec) 1377.1599|GPU 0.0 MB
+Epoch Time(s): 3.201290 | Total steps:    2 | Total forward time: 1.415406s | Total backward time: 1.706170s 
+Eval Acc 0.6720 | F1 0.6240 | Eval time: 39.530298 s
+Epoch 00101 | Step 00000 | Loss 0.0046 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.0509| Forward Speed (edges/sec) 1728.4977|Backward Speed (edges/sec) 1371.2463|GPU 0.0 MB
+Epoch Time(s): 3.823040 | Total steps:    2 | Total forward time: 1.776894s | Total backward time: 1.973260s 
+Epoch 00102 | Step 00000 | Loss 0.0046 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.8443| Forward Speed (edges/sec) 1719.7631|Backward Speed (edges/sec) 1364.3533|GPU 0.0 MB
+Epoch Time(s): 3.430753 | Total steps:    2 | Total forward time: 1.494297s | Total backward time: 1.880295s 
+Epoch 00103 | Step 00000 | Loss 0.0047 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.6653| Forward Speed (edges/sec) 1712.5800|Backward Speed (edges/sec) 1359.6557|GPU 0.0 MB
+Epoch Time(s): 2.906093 | Total steps:    2 | Total forward time: 1.372355s | Total backward time: 1.500103s 
+Epoch 00104 | Step 00000 | Loss 0.0052 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.5310| Forward Speed (edges/sec) 1708.2156|Backward Speed (edges/sec) 1355.0613|GPU 0.0 MB
+Epoch Time(s): 3.061363 | Total steps:    2 | Total forward time: 1.379423s | Total backward time: 1.641294s 
+Epoch 00105 | Step 00000 | Loss 0.0039 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.3892| Forward Speed (edges/sec) 1702.1929|Backward Speed (edges/sec) 1350.8476|GPU 0.0 MB
+Epoch Time(s): 3.396699 | Total steps:    2 | Total forward time: 1.632448s | Total backward time: 1.707039s 
+Eval Acc 0.6720 | F1 0.6300 | Eval time: 46.204182 s
+Epoch 00106 | Step 00000 | Loss 0.0038 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.2467| Forward Speed (edges/sec) 1695.9464|Backward Speed (edges/sec) 1345.9364|GPU 0.0 MB
+Epoch Time(s): 2.429530 | Total steps:    2 | Total forward time: 1.065044s | Total backward time: 1.318623s 
+Epoch 00107 | Step 00000 | Loss 0.0035 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1848| Forward Speed (edges/sec) 1693.5435|Backward Speed (edges/sec) 1344.4413|GPU 0.0 MB
+Epoch Time(s): 2.583072 | Total steps:    2 | Total forward time: 1.023962s | Total backward time: 1.526938s 
+Epoch 00108 | Step 00000 | Loss 0.0041 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0985| Forward Speed (edges/sec) 1692.1310|Backward Speed (edges/sec) 1341.1263|GPU 0.0 MB
+Epoch Time(s): 2.894663 | Total steps:    2 | Total forward time: 1.310770s | Total backward time: 1.544538s 
+Epoch 00109 | Step 00000 | Loss 0.0043 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.9430| Forward Speed (edges/sec) 1686.7757|Backward Speed (edges/sec) 1336.5531|GPU 0.0 MB
+Epoch Time(s): 3.415365 | Total steps:    2 | Total forward time: 1.495654s | Total backward time: 1.873166s 
+Epoch 00110 | Step 00000 | Loss 0.0034 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7735| Forward Speed (edges/sec) 1678.9282|Backward Speed (edges/sec) 1331.3168|GPU 0.0 MB
+Epoch Time(s): 3.080456 | Total steps:    2 | Total forward time: 1.511668s | Total backward time: 1.501276s 
+Eval Acc 0.6680 | F1 0.6240 | Eval time: 43.871719 s
+Epoch 00111 | Step 00000 | Loss 0.0033 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6702| Forward Speed (edges/sec) 1674.4712|Backward Speed (edges/sec) 1329.4269|GPU 0.0 MB
+Epoch Time(s): 2.081716 | Total steps:    2 | Total forward time: 1.201649s | Total backward time: 0.836643s 
+Epoch 00112 | Step 00000 | Loss 0.0035 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7764| Forward Speed (edges/sec) 1674.3560|Backward Speed (edges/sec) 1334.3883|GPU 0.0 MB
+Epoch Time(s): 1.823763 | Total steps:    2 | Total forward time: 0.734020s | Total backward time: 1.049697s 
+Epoch 00113 | Step 00000 | Loss 0.0041 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.9118| Forward Speed (edges/sec) 1680.5572|Backward Speed (edges/sec) 1336.1991|GPU 0.0 MB
+Epoch Time(s): 2.438485 | Total steps:    2 | Total forward time: 1.152624s | Total backward time: 1.238598s 
+Epoch 00114 | Step 00000 | Loss 0.0034 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.8124| Forward Speed (edges/sec) 1676.5266|Backward Speed (edges/sec) 1333.4858|GPU 0.0 MB
+Epoch Time(s): 2.545894 | Total steps:    2 | Total forward time: 1.346034s | Total backward time: 1.160733s 
+Epoch 00115 | Step 00000 | Loss 0.0033 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7902| Forward Speed (edges/sec) 1673.1564|Backward Speed (edges/sec) 1335.2078|GPU 0.0 MB
+Epoch Time(s): 2.277837 | Total steps:    2 | Total forward time: 1.143505s | Total backward time: 1.094467s 
+Eval Acc 0.6680 | F1 0.6220 | Eval time: 27.370106 s
+Epoch 00116 | Step 00000 | Loss 0.0036 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7917| Forward Speed (edges/sec) 1671.4131|Backward Speed (edges/sec) 1338.2010|GPU 0.0 MB
+Epoch Time(s): 1.580111 | Total steps:    2 | Total forward time: 0.702703s | Total backward time: 0.850199s 
+Epoch 00117 | Step 00000 | Loss 0.0033 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.8942| Forward Speed (edges/sec) 1680.7373|Backward Speed (edges/sec) 1338.1424|GPU 0.0 MB
+Epoch Time(s): 2.154652 | Total steps:    2 | Total forward time: 0.924186s | Total backward time: 1.187160s 
+Epoch 00118 | Step 00000 | Loss 0.0039 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.8752| Forward Speed (edges/sec) 1680.7483|Backward Speed (edges/sec) 1336.3324|GPU 0.0 MB
+Epoch Time(s): 2.729638 | Total steps:    2 | Total forward time: 1.037281s | Total backward time: 1.648962s 
+Epoch 00119 | Step 00000 | Loss 0.0033 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.8181| Forward Speed (edges/sec) 1681.2872|Backward Speed (edges/sec) 1334.1374|GPU 0.0 MB
+Epoch Time(s): 2.305446 | Total steps:    2 | Total forward time: 1.176372s | Total backward time: 1.066644s 
+Epoch 00120 | Step 00000 | Loss 0.0032 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7884| Forward Speed (edges/sec) 1677.3643|Backward Speed (edges/sec) 1333.8571|GPU 0.0 MB
+Epoch Time(s): 2.351718 | Total steps:    2 | Total forward time: 1.221988s | Total backward time: 1.078272s 
+Eval Acc 0.6700 | F1 0.6280 | Eval time: 27.692233 s
+Epoch 00121 | Step 00000 | Loss 0.0030 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7406| Forward Speed (edges/sec) 1672.7029|Backward Speed (edges/sec) 1331.4354|GPU 0.0 MB
+Epoch Time(s): 2.042695 | Total steps:    2 | Total forward time: 1.101549s | Total backward time: 0.865133s 
+Epoch 00122 | Step 00000 | Loss 0.0033 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.8173| Forward Speed (edges/sec) 1672.8111|Backward Speed (edges/sec) 1335.4991|GPU 0.0 MB
+Epoch Time(s): 2.328367 | Total steps:    2 | Total forward time: 0.980224s | Total backward time: 1.324822s 
+Epoch 00123 | Step 00000 | Loss 0.0037 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7643| Forward Speed (edges/sec) 1671.1740|Backward Speed (edges/sec) 1333.2777|GPU 0.0 MB
+Epoch Time(s): 2.645262 | Total steps:    2 | Total forward time: 1.310728s | Total backward time: 1.284812s 
+Epoch 00124 | Step 00000 | Loss 0.0037 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7074| Forward Speed (edges/sec) 1669.5695|Backward Speed (edges/sec) 1330.9334|GPU 0.0 MB
+Epoch Time(s): 2.686524 | Total steps:    2 | Total forward time: 1.198088s | Total backward time: 1.442226s 
+Epoch 00125 | Step 00000 | Loss 0.0030 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6184| Forward Speed (edges/sec) 1665.2964|Backward Speed (edges/sec) 1328.4406|GPU 0.0 MB
+Epoch Time(s): 2.111574 | Total steps:    2 | Total forward time: 1.014258s | Total backward time: 1.071381s 
+Eval Acc 0.6700 | F1 0.6300 | Eval time: 29.128063 s
+Epoch 00126 | Step 00000 | Loss 0.0031 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7110| Forward Speed (edges/sec) 1668.0489|Backward Speed (edges/sec) 1331.7199|GPU 0.0 MB
+Epoch Time(s): 1.905079 | Total steps:    2 | Total forward time: 0.908439s | Total backward time: 0.960103s 
+Epoch 00127 | Step 00000 | Loss 0.0027 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7111| Forward Speed (edges/sec) 1667.1810|Backward Speed (edges/sec) 1331.4657|GPU 0.0 MB
+Epoch Time(s): 2.407656 | Total steps:    2 | Total forward time: 1.212555s | Total backward time: 1.141459s 
+Epoch 00128 | Step 00000 | Loss 0.0032 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6628| Forward Speed (edges/sec) 1664.3263|Backward Speed (edges/sec) 1331.4016|GPU 0.0 MB
+Epoch Time(s): 1.997365 | Total steps:    2 | Total forward time: 1.060338s | Total backward time: 0.896955s 
+Epoch 00129 | Step 00000 | Loss 0.0031 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6860| Forward Speed (edges/sec) 1661.8993|Backward Speed (edges/sec) 1332.5102|GPU 0.0 MB
+Epoch Time(s): 2.550993 | Total steps:    2 | Total forward time: 1.115876s | Total backward time: 1.355229s 
+Epoch 00130 | Step 00000 | Loss 0.0028 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6489| Forward Speed (edges/sec) 1659.6813|Backward Speed (edges/sec) 1330.7301|GPU 0.0 MB
+Epoch Time(s): 2.602147 | Total steps:    2 | Total forward time: 1.442098s | Total backward time: 1.124134s 
+Eval Acc 0.6700 | F1 0.6320 | Eval time: 26.814288 s
+Epoch 00131 | Step 00000 | Loss 0.0029 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.5838| Forward Speed (edges/sec) 1654.2800|Backward Speed (edges/sec) 1329.9527|GPU 0.0 MB
+Epoch Time(s): 2.243532 | Total steps:    2 | Total forward time: 0.948196s | Total backward time: 1.271121s 
+Epoch 00132 | Step 00000 | Loss 0.0024 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6010| Forward Speed (edges/sec) 1655.7592|Backward Speed (edges/sec) 1329.7662|GPU 0.0 MB
+Epoch Time(s): 1.650462 | Total steps:    2 | Total forward time: 0.841553s | Total backward time: 0.769920s 
+Epoch 00133 | Step 00000 | Loss 0.0025 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7494| Forward Speed (edges/sec) 1662.1930|Backward Speed (edges/sec) 1334.5335|GPU 0.0 MB
+Epoch Time(s): 1.998019 | Total steps:    2 | Total forward time: 0.919575s | Total backward time: 1.030452s 
+Epoch 00134 | Step 00000 | Loss 0.0027 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7400| Forward Speed (edges/sec) 1659.5140|Backward Speed (edges/sec) 1333.0383|GPU 0.0 MB
+Epoch Time(s): 2.394020 | Total steps:    2 | Total forward time: 1.193499s | Total backward time: 1.111936s 
+Epoch 00135 | Step 00000 | Loss 0.0022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6987| Forward Speed (edges/sec) 1655.1765|Backward Speed (edges/sec) 1330.4059|GPU 0.0 MB
+Epoch Time(s): 2.270587 | Total steps:    2 | Total forward time: 1.195364s | Total backward time: 1.034303s 
+Eval Acc 0.6700 | F1 0.6320 | Eval time: 26.118671 s
+Epoch 00136 | Step 00000 | Loss 0.0026 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6618| Forward Speed (edges/sec) 1651.2731|Backward Speed (edges/sec) 1330.8585|GPU 0.0 MB
+Epoch Time(s): 2.725387 | Total steps:    2 | Total forward time: 1.160490s | Total backward time: 1.539905s 
+Epoch 00137 | Step 00000 | Loss 0.0025 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6458| Forward Speed (edges/sec) 1649.8224|Backward Speed (edges/sec) 1330.4997|GPU 0.0 MB
+Epoch Time(s): 2.242276 | Total steps:    2 | Total forward time: 1.289722s | Total backward time: 0.914120s 
+Epoch 00138 | Step 00000 | Loss 0.0025 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6173| Forward Speed (edges/sec) 1647.2919|Backward Speed (edges/sec) 1331.2855|GPU 0.0 MB
+Epoch Time(s): 2.703727 | Total steps:    2 | Total forward time: 1.229667s | Total backward time: 1.435699s 
+Epoch 00139 | Step 00000 | Loss 0.0026 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.5310| Forward Speed (edges/sec) 1645.2204|Backward Speed (edges/sec) 1328.1028|GPU 0.0 MB
+Epoch Time(s): 2.937549 | Total steps:    2 | Total forward time: 1.390526s | Total backward time: 1.510097s 
+Epoch 00140 | Step 00000 | Loss 0.0026 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.4623| Forward Speed (edges/sec) 1641.7821|Backward Speed (edges/sec) 1325.8413|GPU 0.0 MB
+Epoch Time(s): 2.768102 | Total steps:    2 | Total forward time: 1.277371s | Total backward time: 1.389757s 
+Eval Acc 0.6660 | F1 0.6340 | Eval time: 32.172956 s
+Epoch 00141 | Step 00000 | Loss 0.0025 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.4143| Forward Speed (edges/sec) 1639.2388|Backward Speed (edges/sec) 1323.9777|GPU 0.0 MB
+Epoch Time(s): 2.605379 | Total steps:    2 | Total forward time: 1.193348s | Total backward time: 1.368454s 
+Epoch 00142 | Step 00000 | Loss 0.0025 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.3295| Forward Speed (edges/sec) 1637.5329|Backward Speed (edges/sec) 1321.9047|GPU 0.0 MB
+Epoch Time(s): 2.746803 | Total steps:    2 | Total forward time: 1.339516s | Total backward time: 1.363318s 
+Epoch 00143 | Step 00000 | Loss 0.0022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.2918| Forward Speed (edges/sec) 1636.4597|Backward Speed (edges/sec) 1319.9056|GPU 0.0 MB
+Epoch Time(s): 1.899648 | Total steps:    2 | Total forward time: 0.784836s | Total backward time: 1.072518s 
+Epoch 00144 | Step 00000 | Loss 0.0022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.3689| Forward Speed (edges/sec) 1637.8902|Backward Speed (edges/sec) 1322.5563|GPU 0.0 MB
+Epoch Time(s): 2.262702 | Total steps:    2 | Total forward time: 1.134303s | Total backward time: 1.085901s 
+Epoch 00145 | Step 00000 | Loss 0.0024 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.3114| Forward Speed (edges/sec) 1635.8477|Backward Speed (edges/sec) 1321.2042|GPU 0.0 MB
+Epoch Time(s): 2.617141 | Total steps:    2 | Total forward time: 1.281431s | Total backward time: 1.304585s 
+Eval Acc 0.6640 | F1 0.6340 | Eval time: 28.395546 s
+Epoch 00146 | Step 00000 | Loss 0.0023 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.3481| Forward Speed (edges/sec) 1637.8221|Backward Speed (edges/sec) 1322.2133|GPU 0.0 MB
+Epoch Time(s): 1.254830 | Total steps:    2 | Total forward time: 0.664758s | Total backward time: 0.554500s 
+Epoch 00147 | Step 00000 | Loss 0.0023 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.6300| Forward Speed (edges/sec) 1647.9356|Backward Speed (edges/sec) 1332.2845|GPU 0.0 MB
+Epoch Time(s): 1.816533 | Total steps:    2 | Total forward time: 0.884366s | Total backward time: 0.904660s 
+Epoch 00148 | Step 00000 | Loss 0.0022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.7084| Forward Speed (edges/sec) 1647.0545|Backward Speed (edges/sec) 1336.0900|GPU 0.0 MB
+Epoch Time(s): 1.694831 | Total steps:    2 | Total forward time: 0.911531s | Total backward time: 0.757580s 
+Epoch 00149 | Step 00000 | Loss 0.0019 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.8175| Forward Speed (edges/sec) 1649.5428|Backward Speed (edges/sec) 1339.1812|GPU 0.0 MB
+Epoch Time(s): 1.512515 | Total steps:    2 | Total forward time: 0.793685s | Total backward time: 0.691877s 
+Epoch 00150 | Step 00000 | Loss 0.0024 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 46.9373| Forward Speed (edges/sec) 1651.9854|Backward Speed (edges/sec) 1343.0609|GPU 0.0 MB
+Epoch Time(s): 1.757891 | Total steps:    2 | Total forward time: 0.850297s | Total backward time: 0.869530s 
+Eval Acc 0.6660 | F1 0.6360 | Eval time: 27.322659 s
+Epoch 00151 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0653| Forward Speed (edges/sec) 1654.5566|Backward Speed (edges/sec) 1346.3632|GPU 0.0 MB
+Epoch Time(s): 2.473941 | Total steps:    2 | Total forward time: 1.237084s | Total backward time: 1.199034s 
+Epoch 00152 | Step 00000 | Loss 0.0023 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0302| Forward Speed (edges/sec) 1653.2432|Backward Speed (edges/sec) 1347.6302|GPU 0.0 MB
+Epoch Time(s): 1.975246 | Total steps:    2 | Total forward time: 0.918865s | Total backward time: 1.012780s 
+Epoch 00153 | Step 00000 | Loss 0.0022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0577| Forward Speed (edges/sec) 1654.4295|Backward Speed (edges/sec) 1346.8197|GPU 0.0 MB
+Epoch Time(s): 2.342846 | Total steps:    2 | Total forward time: 1.100444s | Total backward time: 1.185333s 
+Epoch 00154 | Step 00000 | Loss 0.0019 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0210| Forward Speed (edges/sec) 1651.3161|Backward Speed (edges/sec) 1345.6371|GPU 0.0 MB
+Epoch Time(s): 2.345846 | Total steps:    2 | Total forward time: 0.896302s | Total backward time: 1.384100s 
+Epoch 00155 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0731| Forward Speed (edges/sec) 1659.1399|Backward Speed (edges/sec) 1346.6115|GPU 0.0 MB
+Epoch Time(s): 1.915160 | Total steps:    2 | Total forward time: 1.057113s | Total backward time: 0.819334s 
+Eval Acc 0.6640 | F1 0.6360 | Eval time: 26.387810 s
+Epoch 00156 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0893| Forward Speed (edges/sec) 1656.9491|Backward Speed (edges/sec) 1348.6862|GPU 0.0 MB
+Epoch Time(s): 1.975128 | Total steps:    2 | Total forward time: 0.840346s | Total backward time: 1.085991s 
+Epoch 00157 | Step 00000 | Loss 0.0022 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1217| Forward Speed (edges/sec) 1660.8103|Backward Speed (edges/sec) 1347.9699|GPU 0.0 MB
+Epoch Time(s): 2.087147 | Total steps:    2 | Total forward time: 0.870467s | Total backward time: 1.159338s 
+Epoch 00158 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1416| Forward Speed (edges/sec) 1661.4424|Backward Speed (edges/sec) 1347.9325|GPU 0.0 MB
+Epoch Time(s): 2.257996 | Total steps:    2 | Total forward time: 1.129524s | Total backward time: 1.096946s 
+Epoch 00159 | Step 00000 | Loss 0.0018 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1441| Forward Speed (edges/sec) 1659.7579|Backward Speed (edges/sec) 1348.4325|GPU 0.0 MB
+Epoch Time(s): 1.871513 | Total steps:    2 | Total forward time: 0.978272s | Total backward time: 0.861912s 
+Epoch 00160 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1807| Forward Speed (edges/sec) 1659.8775|Backward Speed (edges/sec) 1350.8205|GPU 0.0 MB
+Epoch Time(s): 2.268071 | Total steps:    2 | Total forward time: 0.990377s | Total backward time: 1.201680s 
+Eval Acc 0.6640 | F1 0.6340 | Eval time: 27.964662 s
+Epoch 00161 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1450| Forward Speed (edges/sec) 1658.4668|Backward Speed (edges/sec) 1350.2167|GPU 0.0 MB
+Epoch Time(s): 2.245636 | Total steps:    2 | Total forward time: 1.079484s | Total backward time: 1.122653s 
+Epoch 00162 | Step 00000 | Loss 0.0019 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1305| Forward Speed (edges/sec) 1656.6621|Backward Speed (edges/sec) 1349.2341|GPU 0.0 MB
+Epoch Time(s): 2.357822 | Total steps:    2 | Total forward time: 1.161578s | Total backward time: 1.162517s 
+Epoch 00163 | Step 00000 | Loss 0.0017 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0850| Forward Speed (edges/sec) 1653.7917|Backward Speed (edges/sec) 1347.5247|GPU 0.0 MB
+Epoch Time(s): 2.563125 | Total steps:    2 | Total forward time: 1.241590s | Total backward time: 1.266866s 
+Epoch 00164 | Step 00000 | Loss 0.0021 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0497| Forward Speed (edges/sec) 1651.6213|Backward Speed (edges/sec) 1347.0352|GPU 0.0 MB
+Epoch Time(s): 2.231758 | Total steps:    2 | Total forward time: 1.024542s | Total backward time: 1.184188s 
+Epoch 00165 | Step 00000 | Loss 0.0017 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0679| Forward Speed (edges/sec) 1652.0304|Backward Speed (edges/sec) 1347.0796|GPU 0.0 MB
+Epoch Time(s): 2.129703 | Total steps:    2 | Total forward time: 0.811163s | Total backward time: 1.250644s 
+Eval Acc 0.6660 | F1 0.6340 | Eval time: 26.458897 s
+Epoch 00166 | Step 00000 | Loss 0.0020 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0496| Forward Speed (edges/sec) 1651.7534|Backward Speed (edges/sec) 1344.8702|GPU 0.0 MB
+Epoch Time(s): 2.062449 | Total steps:    2 | Total forward time: 1.115664s | Total backward time: 0.920677s 
+Epoch 00167 | Step 00000 | Loss 0.0018 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.0903| Forward Speed (edges/sec) 1651.1796|Backward Speed (edges/sec) 1348.6496|GPU 0.0 MB
+Epoch Time(s): 1.755512 | Total steps:    2 | Total forward time: 1.026639s | Total backward time: 0.667558s 
+Epoch 00168 | Step 00000 | Loss 0.0019 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1465| Forward Speed (edges/sec) 1650.4974|Backward Speed (edges/sec) 1351.2422|GPU 0.0 MB
+Epoch Time(s): 2.099023 | Total steps:    2 | Total forward time: 0.818797s | Total backward time: 1.253970s 
+Epoch 00169 | Step 00000 | Loss 0.0017 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1293| Forward Speed (edges/sec) 1650.7884|Backward Speed (edges/sec) 1349.8440|GPU 0.0 MB
+Epoch Time(s): 2.027612 | Total steps:    2 | Total forward time: 1.211619s | Total backward time: 0.776960s 
+Epoch 00170 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1529| Forward Speed (edges/sec) 1647.7664|Backward Speed (edges/sec) 1352.8482|GPU 0.0 MB
+Epoch Time(s): 2.067420 | Total steps:    2 | Total forward time: 1.004409s | Total backward time: 0.981561s 
+Eval Acc 0.6660 | F1 0.6340 | Eval time: 25.083977 s
+Epoch 00171 | Step 00000 | Loss 0.0018 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.1903| Forward Speed (edges/sec) 1649.3955|Backward Speed (edges/sec) 1356.1198|GPU 0.0 MB
+Epoch Time(s): 1.861796 | Total steps:    2 | Total forward time: 1.095051s | Total backward time: 0.701081s 
+Epoch 00172 | Step 00000 | Loss 0.0015 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.2079| Forward Speed (edges/sec) 1647.2877|Backward Speed (edges/sec) 1356.8583|GPU 0.0 MB
+Epoch Time(s): 1.814159 | Total steps:    2 | Total forward time: 0.788346s | Total backward time: 1.002167s 
+Epoch 00173 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.2829| Forward Speed (edges/sec) 1652.2352|Backward Speed (edges/sec) 1357.8154|GPU 0.0 MB
+Epoch Time(s): 1.725776 | Total steps:    2 | Total forward time: 0.664878s | Total backward time: 1.000074s 
+Epoch 00174 | Step 00000 | Loss 0.0015 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.3635| Forward Speed (edges/sec) 1657.0824|Backward Speed (edges/sec) 1358.8426|GPU 0.0 MB
+Epoch Time(s): 1.835883 | Total steps:    2 | Total forward time: 0.856650s | Total backward time: 0.918117s 
+Epoch 00175 | Step 00000 | Loss 0.0018 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.4209| Forward Speed (edges/sec) 1659.1696|Backward Speed (edges/sec) 1361.7124|GPU 0.0 MB
+Epoch Time(s): 1.977602 | Total steps:    2 | Total forward time: 0.980764s | Total backward time: 0.955466s 
+Eval Acc 0.6660 | F1 0.6360 | Eval time: 22.539714 s
+Epoch 00176 | Step 00000 | Loss 0.0018 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.4279| Forward Speed (edges/sec) 1658.5335|Backward Speed (edges/sec) 1362.1782|GPU 0.0 MB
+Epoch Time(s): 1.936202 | Total steps:    2 | Total forward time: 0.799736s | Total backward time: 1.078234s 
+Epoch 00177 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.4396| Forward Speed (edges/sec) 1660.0993|Backward Speed (edges/sec) 1360.9008|GPU 0.0 MB
+Epoch Time(s): 2.283267 | Total steps:    2 | Total forward time: 0.979631s | Total backward time: 1.266671s 
+Epoch 00178 | Step 00000 | Loss 0.0017 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.4204| Forward Speed (edges/sec) 1659.6289|Backward Speed (edges/sec) 1361.2290|GPU 0.0 MB
+Epoch Time(s): 2.077065 | Total steps:    2 | Total forward time: 1.174888s | Total backward time: 0.844462s 
+Epoch 00179 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.4392| Forward Speed (edges/sec) 1657.3482|Backward Speed (edges/sec) 1362.6888|GPU 0.0 MB
+Epoch Time(s): 1.623660 | Total steps:    2 | Total forward time: 0.879511s | Total backward time: 0.717863s 
+Epoch 00180 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.4962| Forward Speed (edges/sec) 1657.5185|Backward Speed (edges/sec) 1364.6806|GPU 0.0 MB
+Epoch Time(s): 2.309369 | Total steps:    2 | Total forward time: 1.076140s | Total backward time: 1.209409s 
+Eval Acc 0.6660 | F1 0.6340 | Eval time: 26.082161 s
+Epoch 00181 | Step 00000 | Loss 0.0018 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.5186| Forward Speed (edges/sec) 1658.1838|Backward Speed (edges/sec) 1367.1432|GPU 0.0 MB
+Epoch Time(s): 1.561220 | Total steps:    2 | Total forward time: 0.863436s | Total backward time: 0.647528s 
+Epoch 00182 | Step 00000 | Loss 0.0013 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.6352| Forward Speed (edges/sec) 1658.3542|Backward Speed (edges/sec) 1370.5208|GPU 0.0 MB
+Epoch Time(s): 1.490107 | Total steps:    2 | Total forward time: 0.575930s | Total backward time: 0.849977s 
+Epoch 00183 | Step 00000 | Loss 0.0015 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.7425| Forward Speed (edges/sec) 1666.1501|Backward Speed (edges/sec) 1371.8670|GPU 0.0 MB
+Epoch Time(s): 1.961606 | Total steps:    2 | Total forward time: 0.825367s | Total backward time: 1.106775s 
+Epoch 00184 | Step 00000 | Loss 0.0014 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.7695| Forward Speed (edges/sec) 1666.9878|Backward Speed (edges/sec) 1371.6486|GPU 0.0 MB
+Epoch Time(s): 1.396730 | Total steps:    2 | Total forward time: 0.748666s | Total backward time: 0.623306s 
+Epoch 00185 | Step 00000 | Loss 0.0015 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 47.9284| Forward Speed (edges/sec) 1669.9893|Backward Speed (edges/sec) 1377.6617|GPU 0.0 MB
+Epoch Time(s): 1.299166 | Total steps:    2 | Total forward time: 0.692880s | Total backward time: 0.576046s 
+Eval Acc 0.6660 | F1 0.6340 | Eval time: 34.030899 s
+Epoch 00186 | Step 00000 | Loss 0.0012 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.0970| Forward Speed (edges/sec) 1671.7504|Backward Speed (edges/sec) 1385.7220|GPU 0.0 MB
+Epoch Time(s): 1.541759 | Total steps:    2 | Total forward time: 0.823768s | Total backward time: 0.687380s 
+Epoch 00187 | Step 00000 | Loss 0.0013 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.1369| Forward Speed (edges/sec) 1672.2190|Backward Speed (edges/sec) 1387.4788|GPU 0.0 MB
+Epoch Time(s): 1.866319 | Total steps:    2 | Total forward time: 0.877210s | Total backward time: 0.946847s 
+Epoch 00188 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.2807| Forward Speed (edges/sec) 1676.4119|Backward Speed (edges/sec) 1392.2334|GPU 0.0 MB
+Epoch Time(s): 0.973432 | Total steps:    2 | Total forward time: 0.497037s | Total backward time: 0.444586s 
+Epoch 00189 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.5753| Forward Speed (edges/sec) 1683.9203|Backward Speed (edges/sec) 1398.7428|GPU 0.0 MB
+Epoch Time(s): 1.403471 | Total steps:    2 | Total forward time: 0.619890s | Total backward time: 0.756885s 
+Epoch 00190 | Step 00000 | Loss 0.0016 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.7077| Forward Speed (edges/sec) 1687.8984|Backward Speed (edges/sec) 1404.9542|GPU 0.0 MB
+Epoch Time(s): 1.236176 | Total steps:    2 | Total forward time: 0.661512s | Total backward time: 0.551356s 
+Eval Acc 0.6660 | F1 0.6340 | Eval time: 15.920113 s
+Epoch 00191 | Step 00000 | Loss 0.0015 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.8434| Forward Speed (edges/sec) 1692.8481|Backward Speed (edges/sec) 1409.0843|GPU 0.0 MB
+Epoch Time(s): 1.528371 | Total steps:    2 | Total forward time: 0.668595s | Total backward time: 0.833382s 
+Epoch 00192 | Step 00000 | Loss 0.0015 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 48.9591| Forward Speed (edges/sec) 1699.6248|Backward Speed (edges/sec) 1412.4057|GPU 0.0 MB
+Epoch Time(s): 1.480988 | Total steps:    2 | Total forward time: 0.835840s | Total backward time: 0.618877s 
+Epoch 00193 | Step 00000 | Loss 0.0014 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.0645| Forward Speed (edges/sec) 1699.6310|Backward Speed (edges/sec) 1416.0828|GPU 0.0 MB
+Epoch Time(s): 1.368495 | Total steps:    2 | Total forward time: 0.738529s | Total backward time: 0.575393s 
+Epoch 00194 | Step 00000 | Loss 0.0014 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.1848| Forward Speed (edges/sec) 1702.0868|Backward Speed (edges/sec) 1421.3063|GPU 0.0 MB
+Epoch Time(s): 1.419182 | Total steps:    2 | Total forward time: 0.838183s | Total backward time: 0.556488s 
+Epoch 00195 | Step 00000 | Loss 0.0014 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.3460| Forward Speed (edges/sec) 1703.6006|Backward Speed (edges/sec) 1429.1462|GPU 0.0 MB
+Epoch Time(s): 1.065886 | Total steps:    2 | Total forward time: 0.502892s | Total backward time: 0.535373s 
+Eval Acc 0.6680 | F1 0.6340 | Eval time: 21.550879 s
+Epoch 00196 | Step 00000 | Loss 0.0014 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.4958| Forward Speed (edges/sec) 1710.0870|Backward Speed (edges/sec) 1432.6753|GPU 0.0 MB
+Epoch Time(s): 1.778883 | Total steps:    2 | Total forward time: 0.762499s | Total backward time: 0.989862s 
+Epoch 00197 | Step 00000 | Loss 0.0014 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.5543| Forward Speed (edges/sec) 1712.2129|Backward Speed (edges/sec) 1433.0884|GPU 0.0 MB
+Epoch Time(s): 1.710507 | Total steps:    2 | Total forward time: 0.804126s | Total backward time: 0.846001s 
+Epoch 00198 | Step 00000 | Loss 0.0012 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.6153| Forward Speed (edges/sec) 1713.0644|Backward Speed (edges/sec) 1435.3368|GPU 0.0 MB
+Epoch Time(s): 1.702541 | Total steps:    2 | Total forward time: 0.949359s | Total backward time: 0.722619s 
+Epoch 00199 | Step 00000 | Loss 0.0013 | Train Acc 1.0000 | Train F1 1.0000 | Speed (seeds/sec) 49.6736| Forward Speed (edges/sec) 1713.0641|Backward Speed (edges/sec) 1438.7028|GPU 0.0 MB
+Epoch Time(s): 1.681816 | Total steps:    2 | Total forward time: 0.965439s | Total backward time: 0.644679s 
+Test Acc: 0.6594| F1: 0.6125| Test time: 24.060103 s
+Avg epoch time(s): 2.2554 | F1 0.6125 | Total epochs:  200 | Total Time: 1652.089214 s | Total Train Time:451.106402 s

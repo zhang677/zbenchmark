@@ -44,6 +44,7 @@ def gat_data(g, n_classes):
     g = dgl.add_self_loop(g)
     n_edges = g.number_of_edges()
     num_feats = g.ndata['feat'].shape[1]
+    g.create_formats_()
     return n_classes, n_edges, g, num_feats
 
 def inductive_gat_data(g, n_classes,data_gpu):

@@ -313,8 +313,8 @@ def transductive_sage_run(data_gpu,gpu,g,n_classes,filename = 'result/sample_sag
 
 def batch_gat_run(data_gpu, gpu, data,filename = 'result/sample_gat_run.txt',num_out_heads=1,num_layers=1,num_hidden=8,num_heads=8,num_epochs=200,eval_every=5,log_every=5,batch_size=32,fan_out='5,10',lr=0.005,weight_decay=5e-4, in_drop=.6,attn_drop=.6,negative_slope=.2,residual=False,early_stop=False,fastmode=False,shuffle=True,drop_last=False,num_workers=4):
     """
-    main.py will call this function to instantiate the model(SAGE) and train/val/test
-    the aggregate type isn't exposed since it will be too cumbersome to tape the command
+    main.py will call this function to instantiate the model(GATBlock) and train/val/test
+    
     INPUT:
     gpu : int : the number of device(-1 means 'cpu') 
     data : tuple : see the Unpack process

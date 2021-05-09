@@ -132,8 +132,8 @@ print('over')
 if __name__ == '__main__':
     # set configurations of the model and training process
     parser = argparse.ArgumentParser()
-    parser.add_argument('--model',type=str,default='sage',help='sage/gat/cheb')
-    parser.add_argument('--data-mode',type=str,default='transductive',help='inductive/transductive')
+    parser.add_argument('--model',type=str,default='gat',help='sage/gat/cheb')
+    parser.add_argument('--data-mode',type=str,default='inductive',help='inductive/transductive')
     parser.add_argument('--train-mode',type=str,default='whole',help='sample/whole sage:sample/whole gat:sample/whole cheb:whole')
     #parser.add_argument('--train', type=str, default='gat_run', help='inductive_sage_run/transductive_sage_run/gat_run/cheb_coarsen_run/batch_gat_run/gat_run')
     parser.add_argument('--datagpu',type=int,default=-1,help='data_cpu')
@@ -150,11 +150,12 @@ if __name__ == '__main__':
     parser.add_argument('--batch-size',type=int,default=32,help='Should be consistent with the dataset-size')
     parser.add_argument('--fan-out',type=str,default='5,10',help='Sampling need')
     parser.add_argument('--lr',type=float,default=0.005,help='Learning rate')
-    parser.add_argument('--weight-dacay',type=float,default=5e-4,help='GAT only')
+    parser.add_argument('--weight-decay',type=float,default=5e-4,help='GAT only')
     parser.add_argument('--in-drop',type=float,default=.6,help='GAT only')
     parser.add_argument('--attn-drop',type=float,default=.6,help='GAT only')
     parser.add_argument('--negative-slope',type=float,default=.2,help='GAT only')
     parser.add_argument('--residual',type=bool,default=False,help='GAT only')
+    parser.add_argument('--fastmode',type=bool,default=False,help='GAT only stop training when val_acc drops')
     parser.add_argument('--early-stop',type=bool,default=False,help='GAT if eval begins to stop early')
     parser.add_argument('--shuffle',type=bool,default=True,help='GAT/GraphSAGE')
     parser.add_argument('--drop-last',type=bool,default=True,help='Drop last GAT/GraphSAGE')
@@ -192,9 +193,9 @@ if __name__ == '__main__':
                 print("train over :{:.6f} s".format(time.time()-tic))
                 print('over')
             elif opt.train_mode == 'whole':
-                raise KeyError('No such train_mode : {:.s}'.format(opt.train_mode))
+                raise KeyError('No such train_mode : {:s}'.format(opt.train_mode))
             else:
-                raise KeyError('No such train_mode : {:.s}'.format(opt.train_mode))
+                raise KeyError('No such train_mode : {:s}'.format(opt.train_mode))
 
         elif opt.data_mode == 'transductive':
             if opt.train_mode == 'sample':
@@ -220,10 +221,10 @@ if __name__ == '__main__':
                 print("train over :{:.6f} s".format(time.time()-tic))
                 print('over')
             else:
-                raise KeyError('No such train_mode : {:.s}'.format(opt.train_mode))              
+                raise KeyError('No such train_mode : {:s}'.format(opt.train_mode))              
 
         else:
-            raise KeyError('No such data_mode : {:.s}'.format(opt.data_mode))
+            raise KeyError('No such data_mode : {:s}'.format(opt.data_mode))
 
     
     elif opt.model == 'gat':
@@ -260,7 +261,7 @@ if __name__ == '__main__':
                 print('over')
 
             else:
-                raise KeyError('No such train_mode : {:.s}'.format(opt.train_mode))
+                raise KeyError('No such train_mode : {:s}'.format(opt.train_mode))
 
         elif opt.data_mode == 'inductive':
             if opt.train_mode == 'sample':
@@ -281,13 +282,13 @@ if __name__ == '__main__':
                 print("train over :{:.6f} s".format(time.time()-tic))
                 print('over')
             else:
-                raise KeyError('No such train_mode : {:.s}'.format(opt.train_mode))
+                raise KeyError('No such train_mode : {:s}'.format(opt.train_mode))
 
         else:
-            raise KeyError('No such data_mode : {:.s}'.format(opt.data_mode))
+            raise KeyError('No such data_mode : {:s}'.format(opt.data_mode))
 
     else:
-        raise KeyError('No such model : {:.s}'.format(opt.model))            
+        raise KeyError('No such model : {:s}'.format(opt.model))            
     
     """
             TODO: 
