@@ -165,11 +165,11 @@ sample:在GraphSAGE中直接用``NeighborSampler``（典型值[10,15]）在GAT�
 
 class GAT是DGL自己的实现，针对whole的训练模式(所有点都参与train和test)。class GATBlock是我实现的针对sample的GAT。因为DGL中sample之后产生的是Block，Block中只存seeds和被采样点之间的边。每个gat_layer算一个不同的block(layer坐标越大Block越小)。所以，除了在Block和Graph的数据格式上与DGL实现不同，在计算的对象上也不同（如下图所示）。在inference上，先根据batch_size做FullNeighbor的采样生成dataloader。之后针对dataloader的每一个iteration做一次GAT_Layers的前传。注意inference和forward不同。forward只需要计算传进来的Block即可，而inference需要根据传进来的DGLGraph自己生成Block
 
-<img src="/Users/zhang/Library/Application Support/typora-user-images/image-20210509091404560.png" alt="image-20210509091404560" style="zoom:40%;" />
+<img src="./img/fig1.png" alt="image-20210509091404560" style="zoom:40%;" />
 
 ​																					GAT
 
-<img src="/Users/zhang/Library/Application Support/typora-user-images/image-20210509093440392.png" alt="image-20210509093440392" style="zoom:40%;" />
+<img src="./img/fig2.png" alt="image-20210509093440392" style="zoom:40%;" />
 
 ​																				GATBlock
 
